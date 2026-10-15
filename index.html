@@ -177,6 +177,28 @@
        border:1px solid var(--kreska);transition:transform .25s}
   .galeria img:hover{transform:scale(1.05)}
   .kat .zdj{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:13px;margin-bottom:10px}
+  #szukaj{width:100%;max-width:330px;margin:0 auto 14px;display:block;padding:12px 18px;
+       border:1px solid var(--kreska);border-radius:30px;font:inherit;background:var(--karta)}
+  #szukaj:focus{outline:none;border-color:var(--miedz)}
+  #podsumowanie{text-align:center;color:var(--tekst-2);font-size:13px;margin:0 0 20px}
+  .wyrob{cursor:pointer}
+  .wyprzedany .foto img{filter:grayscale(.6) opacity(.75)}
+  .brak-zdjecia{display:flex;align-items:center;justify-content:center;width:100%;height:100%;
+       color:var(--miedz-ciemna);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+  .pusto{grid-column:1/-1;text-align:center;color:var(--tekst-2);padding:30px 0}
+  .okno{position:fixed;inset:0;z-index:95;background:rgba(20,14,10,.9);display:none;
+       align-items:flex-end;justify-content:center}
+  .okno.widac{display:flex}
+  .tresc-okna{background:var(--karta);width:100%;max-width:520px;border-radius:22px 22px 0 0;
+       padding:24px;max-height:88vh;overflow:auto}
+  @media(min-width:620px){ .okno{align-items:center} .tresc-okna{border-radius:22px} }
+  .tresc-okna .duze{width:100%;max-height:44vh;object-fit:cover;border-radius:16px;margin-bottom:16px}
+  .tresc-okna h3{margin:0;font-size:23px}
+  .pytaj{width:100%;margin-top:18px;padding:15px;border:0;border-radius:30px;background:var(--miedz);
+       color:#fff;font-size:16px;font-weight:600;cursor:pointer}
+  .pytaj:hover{background:var(--miedz-ciemna)}
+  .drobne{font-size:13px;color:var(--tekst-2);margin:12px 0 0}
+  .zamknij-okno{position:absolute;top:14px;right:18px;color:#e8c9a8;font-size:32px;line-height:1;cursor:pointer}
   .lupa{position:fixed;inset:0;z-index:90;background:rgba(20,14,10,.94);display:none;
         align-items:center;justify-content:center;padding:20px;cursor:zoom-out}
   .lupa.widac{display:flex}
@@ -272,51 +294,10 @@
       <p>Każda sztuka powstaje od początku do końca w moich rękach. Jak coś się sprzeda, mogę zrobić podobne — ale nigdy identyczne.</p>
     </div>
 
-    <div class="filtry">
-      <button class="akt" data-f="wszystko">Wszystko</button>
-      <button data-f="bransoleta">Bransolety</button>
-      <button data-f="inne">Wisiorki i naszyjniki</button>
-    </div>
-
+    <input id="szukaj" type="search" placeholder="Szukaj po nazwie albo kamieniu" aria-label="Szukaj wyrobu">
+    <div class="filtry" id="filtry"></div>
+    <p id="podsumowanie"></p>
     <div class="siatka k3" id="lista">
-
-      <div class="wyrob" data-kat="bransoleta">
-        <div class="foto"><img src="img/wyrob-1.jpg" alt="Bransoleta z czarnym agatem" loading="lazy"></div>
-        <div class="tresc"><h3>Bransoleta z agatem</h3><p class="kamien">czarny agat · miedź kuta</p>
-          <div class="dol"><span class="cena">180 zł</span><span class="stan jest">DOSTĘPNA</span></div></div>
-      </div>
-
-      <div class="wyrob" data-kat="bransoleta">
-        <div class="foto"><img src="img/wyrob-2.jpg" alt="Bransoleta oplatana z czarnym turmalinem" loading="lazy"></div>
-        <div class="tresc"><h3>Bransoleta oplatana</h3><p class="kamien">czarny turmalin · surowe kamienie</p>
-          <div class="dol"><span class="cena">160 zł</span><span class="stan jest">DOSTĘPNA</span></div></div>
-      </div>
-
-      <div class="wyrob" data-kat="bransoleta">
-        <div class="foto"><img src="img/wyrob-3.jpg" alt="Bransoleta ze spiralami z cytrynem" loading="lazy"></div>
-        <div class="tresc"><h3>Bransoleta ze spiralami</h3><p class="kamien">cytryn · miedź kuta</p>
-          <div class="dol"><span class="cena">190 zł</span><span class="stan jest">DOSTĘPNA</span></div></div>
-      </div>
-
-      <div class="wyrob" data-kat="bransoleta">
-        <div class="foto"><img src="img/wyrob-4.jpg" alt="Bransoleta z ametystami" loading="lazy"></div>
-        <div class="tresc"><h3>Bransoleta z ametystami</h3><p class="kamien">ametyst · pięć kamieni</p>
-          <div class="dol"><span class="cena">220 zł</span><span class="stan jest">DOSTĘPNA</span></div></div>
-      </div>
-
-      <div class="wyrob" data-kat="bransoleta">
-        <div class="foto"><img src="img/wyrob-5.jpg" alt="Bransoleta szlifowana z czarnym turmalinem" loading="lazy"></div>
-        <div class="tresc"><h3>Bransoleta szlifowana</h3><p class="kamien">czarny turmalin · spirale</p>
-          <div class="dol"><span class="cena">200 zł</span><span class="stan nie">SPRZEDANA</span></div></div>
-      </div>
-
-      <div class="wyrob" data-kat="inne">
-        <div class="foto"><img src="img/galeria/g22.jpg" alt="Wisiorki i kolczyki na stoisku" loading="lazy"></div>
-        </div>
-        <div class="tresc"><h3>Wisiorki i naszyjniki</h3><p class="kamien">kamień oplatany miedzią</p>
-          <div class="dol"><span class="cena">zapytaj</span><span class="stan zam">NA ZAMÓWIENIE</span></div></div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -451,6 +432,8 @@
   <a href="#kontakt"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg>Kontakt</a>
 </nav>
 
+<div class="okno" id="okno"><span class="zamknij zamknij-okno">&times;</span><div class="tresc-okna"></div></div>
+
 <div class="lupa" id="lupa"><span class="zamknij">&times;</span><img alt=""></div>
 
 <script>
@@ -465,7 +448,7 @@
 
   // powiekszanie zdjec po dotknieciu
   const lupa = document.getElementById('lupa'), duze = lupa.querySelector('img');
-  document.querySelectorAll('.wyrob .foto img, .galeria img').forEach(i => i.addEventListener('click', () => {
+  document.querySelectorAll('.galeria img').forEach(i => i.addEventListener('click', () => {
     duze.src = i.src; duze.alt = i.alt; lupa.classList.add('widac');
   }));
   lupa.addEventListener('click', () => lupa.classList.remove('widac'));
@@ -505,5 +488,6 @@
     b.style.background = '#2b211a';
   });
 </script>
+<script src="sklep.js?v=1"></script>
 </body>
 </html>

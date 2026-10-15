@@ -1,0 +1,33 @@
+{
+  "_opis": "Magazyn sklepu. Nazwy i kamienie z podpisow na zdjeciach; ceny i ilosci sa na razie przykladowe - do potwierdzenia z Dmytro. Kategorie: bransoleta, wisiorek, naszyjnik, kolczyki, pierscionek, spinka.",
+  "produkty": [
+    { "id": "b01", "nazwa": "Bransoleta z agatem",        "kamien": "czarny agat",                       "kategoria": "bransoleta", "cena": 180, "ilosc": 1, "zdjecie": "img/wyrob-1.jpg" },
+    { "id": "b02", "nazwa": "Bransoleta oplatana",         "kamien": "czarny turmalin, surowy",           "kategoria": "bransoleta", "cena": 160, "ilosc": 2, "zdjecie": "img/wyrob-2.jpg" },
+    { "id": "b03", "nazwa": "Bransoleta ze spiralami",     "kamien": "cytryn",                            "kategoria": "bransoleta", "cena": 190, "ilosc": 1, "zdjecie": "img/wyrob-3.jpg" },
+    { "id": "b04", "nazwa": "Bransoleta z ametystami",     "kamien": "ametyst, pięć kamieni",             "kategoria": "bransoleta", "cena": 220, "ilosc": 1, "zdjecie": "img/wyrob-4.jpg" },
+    { "id": "b05", "nazwa": "Bransoleta szlifowana",       "kamien": "czarny turmalin",                   "kategoria": "bransoleta", "cena": 200, "ilosc": 0, "zdjecie": "img/wyrob-5.jpg" },
+    { "id": "b06", "nazwa": "Bransoleta z pirytem",        "kamien": "piryt i turmalin",                  "kategoria": "bransoleta", "cena": 195, "ilosc": 1, "zdjecie": "img/galeria/g04.jpg" },
+    { "id": "b07", "nazwa": "Bransoleta trzech kamieni",   "kamien": "kryształ górski, szmaragd, czarny turmalin", "kategoria": "bransoleta", "cena": 260, "ilosc": 1, "zdjecie": "img/galeria/g05.jpg" },
+    { "id": "b08", "nazwa": "Bransoleta z labradorytem",   "kamien": "labradoryt",                        "kategoria": "bransoleta", "cena": 210, "ilosc": 1, "zdjecie": "img/galeria/g06.jpg" },
+    { "id": "b09", "nazwa": "Bransoleta ametystowa",       "kamien": "ametyst",                           "kategoria": "bransoleta", "cena": 215, "ilosc": 1, "zdjecie": "img/galeria/g07.jpg" },
+    { "id": "b10", "nazwa": "Bransoleta z cytrynem",       "kamien": "cytryn",                            "kategoria": "bransoleta", "cena": 190, "ilosc": 1, "zdjecie": "img/galeria/g08.jpg" },
+    { "id": "b11", "nazwa": "Bransoleta wąska",            "kamien": "kamień naturalny",                  "kategoria": "bransoleta", "cena": 150, "ilosc": 2, "zdjecie": "img/galeria/g09.jpg" },
+    { "id": "b12", "nazwa": "Bransoleta leśna",            "kamien": "kamień naturalny",                  "kategoria": "bransoleta", "cena": 175, "ilosc": 1, "zdjecie": "img/galeria/g10.jpg" },
+    { "id": "b13", "nazwa": "Bransoleta z ciemnym okiem",  "kamien": "labradoryt",                        "kategoria": "bransoleta", "cena": 205, "ilosc": 1, "zdjecie": "img/galeria/g11.jpg" },
+    { "id": "b14", "nazwa": "Bransoleta masywna",          "kamien": "kamień naturalny",                  "kategoria": "bransoleta", "cena": 230, "ilosc": 1, "zdjecie": "img/galeria/g12.jpg" },
+    { "id": "b15", "nazwa": "Bransoleta ze splotem",       "kamien": "kamień naturalny",                  "kategoria": "bransoleta", "cena": 185, "ilosc": 1, "zdjecie": "img/galeria/g13.jpg" },
+    { "id": "b16", "nazwa": "Bransoleta otwarta",          "kamien": "kamień naturalny",                  "kategoria": "bransoleta", "cena": 170, "ilosc": 1, "zdjecie": "img/galeria/g14.jpg" },
+    { "id": "b17", "nazwa": "Bransoleta z owalnym kamieniem", "kamien": "kamień naturalny",               "kategoria": "bransoleta", "cena": 195, "ilosc": 1, "zdjecie": "img/galeria/g15.jpg" },
+    { "id": "b18", "nazwa": "Bransoleta kuta szeroka",     "kamien": "miedź kuta",                        "kategoria": "bransoleta", "cena": 165, "ilosc": 3, "zdjecie": "img/galeria/g16.jpg" },
+    { "id": "b19", "nazwa": "Bransoleta z ciemnym agatem", "kamien": "czarny agat",                       "kategoria": "bransoleta", "cena": 200, "ilosc": 1, "zdjecie": "img/galeria/g17.jpg" },
+    { "id": "b20", "nazwa": "Bransoleta na pniu",          "kamien": "kamień naturalny",                  "kategoria": "bransoleta", "cena": 180, "ilosc": 0, "zdjecie": "img/galeria/g18.jpg" },
+    { "id": "b21", "nazwa": "Bransoleta z kamieniami",     "kamien": "kamienie mieszane",                 "kategoria": "bransoleta", "cena": 225, "ilosc": 1, "zdjecie": "img/galeria/g24.jpg" },
+
+    { "id": "w01", "nazwa": "Wisiorki — wybór ze stoiska", "kamien": "kamień oplatany miedzią",           "kategoria": "wisiorek",   "cena": 0,   "ilosc": 5, "zdjecie": "img/galeria/g21.jpg" },
+    { "id": "k01", "nazwa": "Kolczyki — wybór ze stoiska", "kamien": "miedź i kamienie",                  "kategoria": "kolczyki",   "cena": 0,   "ilosc": 8, "zdjecie": "img/galeria/g19.jpg" },
+    { "id": "k02", "nazwa": "Kolczyki wiszące",            "kamien": "miedź i kamienie",                  "kategoria": "kolczyki",   "cena": 0,   "ilosc": 6, "zdjecie": "img/galeria/g22.jpg" },
+    { "id": "n01", "nazwa": "Naszyjnik-obręcz ze spiralą", "kamien": "miedź kuta, polerowana",            "kategoria": "naszyjnik",  "cena": 0,   "ilosc": 2, "zdjecie": "" },
+    { "id": "p01", "nazwa": "Pierścionek oplatany",        "kamien": "kamień naturalny",                  "kategoria": "pierscionek","cena": 0,   "ilosc": 4, "zdjecie": "" },
+    { "id": "s01", "nazwa": "Spinka do włosów",            "kamien": "kamień naturalny",                  "kategoria": "spinka",     "cena": 0,   "ilosc": 3, "zdjecie": "" }
+  ]
+}
