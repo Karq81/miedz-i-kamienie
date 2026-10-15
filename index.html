@@ -169,6 +169,12 @@
   .pasek a svg{margin:0 auto 3px}
   .pasek a.akt{color:var(--miedz-ciemna);font-weight:700}
 
+  .galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  @media(min-width:620px){ .galeria{grid-template-columns:repeat(6,1fr)} }
+  .galeria img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;cursor:zoom-in;
+       border:1px solid var(--kreska);transition:transform .25s}
+  .galeria img:hover{transform:scale(1.05)}
+  .kat .zdj{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:13px;margin-bottom:10px}
   .lupa{position:fixed;inset:0;z-index:90;background:rgba(20,14,10,.94);display:none;
         align-items:center;justify-content:center;padding:20px;cursor:zoom-out}
   .lupa.widac{display:flex}
@@ -228,11 +234,11 @@
     </div>
     <div class="siatka k2 pokaz">
       <a class="kat" href="#wyroby">
-        <svg width="42" height="42" viewBox="0 0 40 40" fill="none" stroke="#b87333" stroke-width="2.4"><path d="M20 7a13 13 0 1 1-9 22.4"/><circle cx="20" cy="7" r="3.2" fill="#8c4a1e" stroke="none"/><circle cx="31" cy="15" r="2.4" fill="#5f7a5a" stroke="none"/></svg>
+        <img class="zdj" src="img/galeria/g01.jpg" alt="Bransolety na ekspozytorze" loading="lazy">
         <b>Bransolety</b><p>kute i owijane</p>
       </a>
       <a class="kat" href="#wyroby">
-        <svg width="42" height="42" viewBox="0 0 40 40" fill="none" stroke="#b87333" stroke-width="2.4"><path d="M13 9a7 7 0 0 1 14 0"/><ellipse cx="20" cy="25" rx="7" ry="10" fill="#cfe0d6" stroke="#b87333"/><path d="M20 15v4"/></svg>
+        <img class="zdj" src="img/galeria/g21.jpg" alt="Wisiorki na stoisku" loading="lazy">
         <b>Wisiorki</b><p>kamień w miedzi</p>
       </a>
       <a class="kat" href="#wyroby">
@@ -240,7 +246,7 @@
         <b>Naszyjniki</b><p>obręcze ze spiralą</p>
       </a>
       <a class="kat" href="#wyroby">
-        <svg width="42" height="42" viewBox="0 0 40 40" fill="none" stroke="#b87333" stroke-width="2.4"><path d="M14 10a5 5 0 0 1 10 0"/><path d="M14 10v5"/><circle cx="14" cy="21" r="5.2" fill="#d7c08a" stroke="#b87333"/><path d="M26 15v5"/><circle cx="26" cy="26" r="4.2" fill="#9fb8c9" stroke="#b87333"/></svg>
+        <img class="zdj" src="img/galeria/g19.jpg" alt="Kolczyki na stoisku" loading="lazy">
         <b>Kolczyki</b><p>lekkie, na co dzień</p>
       </a>
     </div>
@@ -295,14 +301,37 @@
       </div>
 
       <div class="wyrob" data-kat="inne">
-        <div class="foto ciemna">
-          <svg width="130" height="130" viewBox="0 0 120 120" fill="none" stroke="#d99a5e" stroke-width="3" stroke-linecap="round"><path d="M44 26a16 16 0 0 1 32 0"/><ellipse cx="60" cy="70" rx="20" ry="28" fill="#8fb39a" stroke="#d99a5e"/><path d="M60 42v6M48 56c8 6 16 6 24 0"/></svg>
-          <div class="podpis">zdjęcia wkrótce</div>
+        <div class="foto"><img src="img/galeria/g22.jpg" alt="Wisiorki i kolczyki na stoisku" loading="lazy"></div>
         </div>
         <div class="tresc"><h3>Wisiorki i naszyjniki</h3><p class="kamien">kamień oplatany miedzią</p>
           <div class="dol"><span class="cena">zapytaj</span><span class="stan zam">NA ZAMÓWIENIE</span></div></div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="srodek">
+    <div class="naglowek pokaz">
+      <span>Galeria</span>
+      <h2>Więcej z pracowni</h2>
+      <div class="ozdoba"></div>
+      <p>Część wyrobów już znalazła właścicieli — ale pokazują, co potrafię zrobić na zamówienie.</p>
+    </div>
+    <div class="galeria pokaz">
+        <img src="img/galeria/g04.jpg" alt="Wyrób z miedzi" loading="lazy">
+        <img src="img/galeria/g05.jpg" alt="Wyrób z miedzi" loading="lazy">
+        <img src="img/galeria/g07.jpg" alt="Wyrób z miedzi" loading="lazy">
+        <img src="img/galeria/g08.jpg" alt="Wyrób z miedzi" loading="lazy">
+        <img src="img/galeria/g10.jpg" alt="Wyrób z miedzi" loading="lazy">
+        <img src="img/galeria/g11.jpg" alt="Wyrób z miedzi" loading="lazy">
+        <img src="img/galeria/g14.jpg" alt="Wyrób z miedzi" loading="lazy">
+        <img src="img/galeria/g16.jpg" alt="Wyrób z miedzi" loading="lazy">
+        <img src="img/galeria/g18.jpg" alt="Wyrób z miedzi" loading="lazy">
+        <img src="img/galeria/g20.jpg" alt="Wyrób z miedzi" loading="lazy">
+        <img src="img/galeria/g23.jpg" alt="Wyrób z miedzi" loading="lazy">
+        <img src="img/galeria/g24.jpg" alt="Wyrób z miedzi" loading="lazy">
     </div>
   </div>
 </section>
@@ -417,7 +446,7 @@
 <script>
   // powiekszanie zdjec po dotknieciu
   const lupa = document.getElementById('lupa'), duze = lupa.querySelector('img');
-  document.querySelectorAll('.wyrob .foto img').forEach(i => i.addEventListener('click', () => {
+  document.querySelectorAll('.wyrob .foto img, .galeria img').forEach(i => i.addEventListener('click', () => {
     duze.src = i.src; duze.alt = i.alt; lupa.classList.add('widac');
   }));
   lupa.addEventListener('click', () => lupa.classList.remove('widac'));
