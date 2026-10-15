@@ -30,7 +30,7 @@
     --ozdobny:"Cormorant Garamond",Georgia,serif;
   }
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  html:focus-within{scroll-behavior:smooth}
   body{margin:0;background:var(--krem);color:var(--tekst);
        font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65;padding-bottom:64px}
   img,svg{display:block;max-width:100%}
@@ -210,7 +210,7 @@
     <div class="etykieta">Rękodzieło z miedzi</div>
     <h1>Dmytro Nowy</h1>
     <p class="pod">Bransolety, wisiorki, naszyjniki, pierścionki<br>i spinki — kute w miedzi, z naturalnymi kamieniami</p>
-    <div class="hero-foto"><img src="img/wyrob-1.jpg" alt="Bransoleta z czarnym agatem na nadgarstku"></div>
+    <div class="hero-foto"><img src="img/wyrob-1.jpg" width="332" height="590" alt="Bransoleta z czarnym agatem na nadgarstku"></div>
     <p class="cytat">„Kamienie są naturalne.<br>Zrobione z dobrej energii."</p>
     <div class="cta">
       <a class="guzik glowny" href="#wyroby">Zobacz wyroby</a>
@@ -454,6 +454,15 @@
 <div class="lupa" id="lupa"><span class="zamknij">&times;</span><img alt=""></div>
 
 <script>
+  // Przegladarka probuje przywrocic poprzednie miejsce przewijania, a przy plynnym
+  // przewijaniu robi to z animacja - wygladalo, jakby strona sama zjezdzala na dol.
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  if (!location.hash) {
+    const naGore = () => window.scrollTo(0, 0);
+    naGore();
+    addEventListener('load', naGore);
+  }
+
   // powiekszanie zdjec po dotknieciu
   const lupa = document.getElementById('lupa'), duze = lupa.querySelector('img');
   document.querySelectorAll('.wyrob .foto img, .galeria img').forEach(i => i.addEventListener('click', () => {
