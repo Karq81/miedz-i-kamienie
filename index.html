@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Miedź i kamienie — ręcznie kute wyroby Dmytro Nowy</title>
+<meta name="description" content="Ręcznie kute bransolety, wisiorki i naszyjniki z miedzi z naturalnymi kamieniami. Każda sztuka jedyna w swoim rodzaju.">
+<style>
+  :root{
+    --miedz:#b87333; --miedz-ciemna:#8c4a1e; --miedz-jasna:#d99a5e; --miedz-blada:#e8c9a8;
+    --patyna:#5f7a5a; --krem:#f7f2ea; --karta:#fffdfa; --ciemny:#2b211a;
+    --tekst:#2e231c; --tekst-2:#6f5f50; --kreska:#e6dccd;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--krem);color:var(--tekst);
+       font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65;
+       padding-bottom:64px}
+  img,svg{display:block;max-width:100%}
+  .srodek{max-width:960px;margin:0 auto;padding:0 20px}
+
+  /* górny pasek */
+  .gora{position:sticky;top:0;z-index:40;background:rgba(247,242,234,.94);
+        backdrop-filter:blur(8px);border-bottom:1px solid var(--kreska)}
+  .gora .srodek{display:flex;align-items:center;justify-content:space-between;height:58px}
+  .marka{font-size:14px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;
+         color:var(--miedz-ciemna);text-decoration:none}
+  .jezyki{display:flex;gap:5px}
+  .jezyki a{font-size:11px;padding:4px 9px;border:1px solid var(--kreska);border-radius:20px;
+            color:var(--tekst-2);text-decoration:none}
+  .jezyki a.akt{background:var(--miedz);color:#fff;border-color:var(--miedz)}
+  .menu{display:none;gap:22px}
+  .menu a{color:var(--tekst);text-decoration:none;font-size:15px}
+  .menu a:hover{color:var(--miedz-ciemna)}
+  @media(min-width:860px){ .menu{display:flex} body{padding-bottom:0} .pasek{display:none!important} }
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;
+        background:radial-gradient(120% 90% at 20% 0%,#3b2a1d 0%,#231a13 55%,#1b140e 100%);
+        color:#f6ece0;text-align:center;padding:46px 0 52px}
+  .hero .etykieta{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--miedz-jasna)}
+  .hero h1{font-size:40px;line-height:1.1;margin:12px 0 0;letter-spacing:-.8px}
+  .hero .pod{color:#d9c6b2;margin:12px auto 0;max-width:420px;font-size:16px}
+  .hero .cytat{margin:22px auto 0;max-width:380px;font-style:italic;color:var(--miedz-blada);font-size:16px}
+  .hero .rysunek{margin:26px auto 0;max-width:300px}
+  .cta{display:flex;gap:10px;justify-content:center;margin-top:28px;flex-wrap:wrap}
+  .guzik{display:inline-block;padding:13px 26px;border-radius:30px;font-size:15px;font-weight:600;
+         text-decoration:none;border:1.5px solid transparent}
+  .glowny{background:var(--miedz);color:#fff}
+  .glowny:hover{background:var(--miedz-ciemna)}
+  .drugi{border-color:rgba(232,201,168,.55);color:var(--miedz-blada)}
+  .drugi:hover{border-color:var(--miedz-blada)}
+
+  /* pasek zaufania */
+  .zaufanie{background:var(--ciemny);color:#cbb8a4;font-size:13px;padding:11px 0}
+  .zaufanie .srodek{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+  .zaufanie b{color:var(--miedz-jasna);font-weight:600}
+
+  section{padding:46px 0}
+  .naglowek{text-align:center;margin-bottom:28px}
+  .naglowek span{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--miedz-ciemna)}
+  .naglowek h2{font-size:28px;margin:8px 0 0;letter-spacing:-.4px}
+  .naglowek p{color:var(--tekst-2);margin:8px auto 0;max-width:460px;font-size:15px}
+
+  .siatka{display:grid;gap:14px}
+  .k2{grid-template-columns:1fr 1fr}
+  @media(min-width:720px){ .k2{grid-template-columns:repeat(4,1fr)} .k3{grid-template-columns:repeat(3,1fr)} }
+
+  .kat{background:var(--karta);border:1px solid var(--kreska);border-radius:18px;padding:18px 14px;
+       text-align:center;text-decoration:none;color:var(--tekst)}
+  .kat:hover{border-color:var(--miedz-jasna)}
+  .kat svg{margin:0 auto 8px}
+  .kat b{font-size:15px;font-weight:600}
+  .kat p{margin:3px 0 0;font-size:12px;color:var(--tekst-2)}
+
+  /* karta wyrobu */
+  .wyrob{background:var(--karta);border:1px solid var(--kreska);border-radius:20px;overflow:hidden;
+         display:flex;flex-direction:column}
+  .foto{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;position:relative;
+        background:linear-gradient(145deg,#efe2d2 0%,#e4d2bc 55%,#d9c4a9 100%)}
+  .foto.ciemna{background:linear-gradient(145deg,#4a3728 0%,#35261a 100%)}
+  .foto .podpis{position:absolute;bottom:8px;left:0;right:0;text-align:center;font-size:10px;
+                letter-spacing:.1em;text-transform:uppercase;color:rgba(70,50,35,.5)}
+  .foto.ciemna .podpis{color:rgba(232,201,168,.45)}
+  .wyrob .tresc{padding:14px 16px 17px}
+  .wyrob h3{margin:0;font-size:17px;font-weight:600}
+  .wyrob .kamien{margin:3px 0 0;font-size:13px;color:var(--tekst-2)}
+  .dol{display:flex;align-items:center;justify-content:space-between;margin-top:11px;gap:8px}
+  .cena{font-size:17px;font-weight:700;color:var(--miedz-ciemna)}
+  .stan{font-size:10.5px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.04em}
+  .jest{background:#e5efe1;color:#3f5e36}
+  .nie{background:#f0e3e3;color:#7d3d3d}
+  .zam{background:#f5e9d9;color:var(--miedz-ciemna)}
+
+  /* kroki */
+  .krok{background:var(--karta);border:1px solid var(--kreska);border-radius:18px;padding:20px}
+  .numer{width:34px;height:34px;border-radius:50%;background:var(--miedz);color:#fff;
+         display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:10px}
+  .krok h3{margin:0 0 5px;font-size:17px}
+  .krok p{margin:0;font-size:14px;color:var(--tekst-2)}
+
+  /* o mnie */
+  .omnie{display:grid;gap:20px;align-items:center}
+  @media(min-width:760px){ .omnie{grid-template-columns:300px 1fr} }
+  .omnie .foto{border-radius:20px;aspect-ratio:4/5}
+  .omnie p{font-size:15.5px;color:var(--tekst-2)}
+
+  /* jarmarki */
+  .jarmark{display:flex;gap:14px;align-items:center;background:var(--karta);
+           border:1px solid var(--kreska);border-radius:16px;padding:14px;margin-bottom:10px}
+  .data{background:var(--miedz);color:#fff;border-radius:12px;width:56px;flex:none;text-align:center;padding:7px 0}
+  .data b{display:block;font-size:19px;line-height:1.1}
+  .data span{font-size:10px;text-transform:uppercase;letter-spacing:.08em}
+  .jarmark b.co{font-size:15.5px}
+  .jarmark p{margin:0;font-size:13px;color:var(--tekst-2)}
+
+  /* formularz */
+  .form{background:var(--karta);border:1px solid var(--kreska);border-radius:22px;padding:22px;
+        max-width:520px;margin:0 auto}
+  .form label{display:block;font-size:13px;color:var(--tekst-2);margin:0 0 5px}
+  .form input,.form textarea{width:100%;padding:12px 14px;border:1px solid var(--kreska);
+       border-radius:12px;font:inherit;background:#fff;margin-bottom:13px}
+  .form textarea{min-height:92px;resize:vertical}
+  .form input:focus,.form textarea:focus{outline:none;border-color:var(--miedz)}
+  .zgoda{display:flex;gap:10px;font-size:12.5px;color:var(--tekst-2);margin-bottom:16px}
+  .form button{width:100%;padding:14px;border:0;border-radius:30px;background:var(--miedz);
+       color:#fff;font-size:16px;font-weight:600;cursor:pointer}
+  .form button:hover{background:var(--miedz-ciemna)}
+  .mala{font-size:12.5px;color:var(--tekst-2);text-align:center;margin:12px 0 0}
+
+  footer{background:var(--ciemny);color:#b9a692;padding:34px 0 40px;text-align:center;font-size:14px}
+  footer .ikony{display:flex;gap:14px;justify-content:center;margin-bottom:16px}
+  footer .ikony a{width:40px;height:40px;border-radius:50%;background:rgba(184,115,51,.9);
+                  display:flex;align-items:center;justify-content:center}
+  footer .zegnaj{color:var(--miedz-jasna);font-size:16px;margin:0 0 14px}
+  footer .info{font-size:11.5px;color:#7e7064;margin:18px auto 0;max-width:460px;line-height:1.6}
+
+  /* dolny pasek */
+  .pasek{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--karta);
+         border-top:1px solid var(--kreska);display:flex;padding:8px 0 11px}
+  .pasek a{flex:1;text-align:center;font-size:10px;color:var(--tekst-2);text-decoration:none}
+  .pasek a svg{margin:0 auto 3px}
+  .pasek a.akt{color:var(--miedz-ciemna);font-weight:700}
+</style>
+</head>
+<body>
+
+<div class="gora">
+  <div class="srodek">
+    <a class="marka" href="#gora">Miedź i kamienie</a>
+    <nav class="menu">
+      <a href="#wyroby">Wyroby</a>
+      <a href="#jak">Jak zamówić</a>
+      <a href="#omnie">O mnie</a>
+      <a href="#jarmarki">Jarmarki</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="jezyki"><a class="akt" href="#">PL</a><a href="#">UA</a><a href="#">EN</a></div>
+  </div>
+</div>
+
+<header class="hero" id="gora">
+  <div class="srodek">
+    <div class="etykieta">Rękodzieło z miedzi</div>
+    <h1>Dmytro Nowy</h1>
+    <p class="pod">Ręcznie kute bransolety, wisiorki i naszyjniki<br>z naturalnymi kamieniami</p>
+    <div class="rysunek">
+      <svg viewBox="0 0 300 150" fill="none" stroke="#d99a5e" stroke-width="2.6" stroke-linecap="round">
+        <path d="M150 28c40 0 72 30 72 62 0 18-10 30-24 30" opacity=".95"/>
+        <path d="M150 28c-40 0-72 30-72 62 0 18 10 30 24 30" opacity=".95"/>
+        <path d="M150 42c32 0 58 24 58 50" opacity=".45"/>
+        <path d="M150 42c-32 0-58 24-58 50" opacity=".45"/>
+        <circle cx="150" cy="28" r="9" fill="#e8c9a8" stroke="none"/>
+        <circle cx="197" cy="52" r="6" fill="#8aa98a" stroke="none"/>
+        <circle cx="103" cy="52" r="6" fill="#9fb8c9" stroke="none"/>
+        <path d="M222 120a7 7 0 1 0-7-7 11 11 0 1 0 11 11" opacity=".9"/>
+        <path d="M78 120a7 7 0 1 1 7-7 11 11 0 1 1-11 11" opacity=".9"/>
+      </svg>
+    </div>
+    <p class="cytat">„Kamienie są naturalne.<br>Zrobione z dobrej energii."</p>
+    <div class="cta">
+      <a class="guzik glowny" href="#wyroby">Zobacz wyroby</a>
+      <a class="guzik drugi" href="#kontakt">Napisz do mnie</a>
+    </div>
+  </div>
+</header>
+
+<div class="zaufanie">
+  <div class="srodek">
+    <span><b>Ręczna robota</b> — kute młotkiem</span>
+    <span><b>Naturalne kamienie</b> — bez imitacji</span>
+    <span><b>Każda sztuka jedna</b> — nie ma dwóch takich samych</span>
+  </div>
+</div>
+
+<section id="kategorie">
+  <div class="srodek">
+    <div class="naglowek">
+      <span>Co robię</span>
+      <h2>Cztery rzeczy, z miedzi</h2>
+    </div>
+    <div class="siatka k2">
+      <a class="kat" href="#wyroby">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#b87333" stroke-width="2.4"><path d="M20 7a13 13 0 1 1-9 22.4"/><circle cx="20" cy="7" r="3.2" fill="#8c4a1e" stroke="none"/><circle cx="31" cy="15" r="2.4" fill="#5f7a5a" stroke="none"/></svg>
+        <b>Bransolety</b><p>kute i owijane</p>
+      </a>
+      <a class="kat" href="#wyroby">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#b87333" stroke-width="2.4"><path d="M13 9a7 7 0 0 1 14 0"/><ellipse cx="20" cy="25" rx="7" ry="10" fill="#cfe0d6" stroke="#b87333"/><path d="M20 15v4"/></svg>
+        <b>Wisiorki</b><p>kamień w miedzi</p>
+      </a>
+      <a class="kat" href="#wyroby">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#b87333" stroke-width="2.4"><path d="M9 11a13 13 0 0 0 22 0"/><path d="M20 23a4.5 4.5 0 1 1 4.5 4.5A8 8 0 1 1 17 19"/></svg>
+        <b>Naszyjniki</b><p>obręcze ze spiralą</p>
+      </a>
+      <a class="kat" href="#wyroby">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#b87333" stroke-width="2.4"><path d="M14 10a5 5 0 0 1 10 0"/><path d="M14 10v5"/><circle cx="14" cy="21" r="5.2" fill="#d7c08a" stroke="#b87333"/><path d="M26 15v5"/><circle cx="26" cy="26" r="4.2" fill="#9fb8c9" stroke="#b87333"/></svg>
+        <b>Kolczyki</b><p>lekkie, na co dzień</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="wyroby" style="background:#f1e9dd">
+  <div class="srodek">
+    <div class="naglowek">
+      <span>Wyroby</span>
+      <h2>Co teraz mam</h2>
+      <p>Każda sztuka powstaje od początku do końca w moich rękach. Jak coś się sprzeda, mogę zrobić podobne — ale nigdy identyczne.</p>
+    </div>
+    <div class="siatka k3">
+
+      <div class="wyrob">
+        <div class="foto">
+          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" stroke="#a8622a" stroke-width="3" stroke-linecap="round"><path d="M60 22a38 38 0 1 1-27 64.6"/><circle cx="60" cy="22" r="8" fill="#3d3a42" stroke="none"/><circle cx="92" cy="42" r="5" fill="#7d7a85" stroke="none"/><path d="M33 86.6a9 9 0 1 0 9-9" /></svg>
+          <div class="podpis">zdjęcie wyrobu</div>
+        </div>
+        <div class="tresc">
+          <h3>Bransoleta kuta</h3>
+          <p class="kamien">czarny turmalin · miedź</p>
+          <div class="dol"><span class="cena">180 zł</span><span class="stan jest">DOSTĘPNA</span></div>
+        </div>
+      </div>
+
+      <div class="wyrob">
+        <div class="foto ciemna">
+          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" stroke="#d99a5e" stroke-width="3" stroke-linecap="round"><path d="M44 26a16 16 0 0 1 32 0"/><ellipse cx="60" cy="70" rx="20" ry="28" fill="#8fb39a" stroke="#d99a5e"/><path d="M60 42v6M48 56c8 6 16 6 24 0M48 76c8 6 16 6 24 0"/></svg>
+          <div class="podpis">zdjęcie wyrobu</div>
+        </div>
+        <div class="tresc">
+          <h3>Wisiorek oplatany</h3>
+          <p class="kamien">prehnit · rzemyk</p>
+          <div class="dol"><span class="cena">140 zł</span><span class="stan nie">SPRZEDANY</span></div>
+        </div>
+      </div>
+
+      <div class="wyrob">
+        <div class="foto">
+          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" stroke="#a8622a" stroke-width="3" stroke-linecap="round"><path d="M22 36a38 38 0 0 0 76 0"/><path d="M60 64a10 10 0 1 1 10 10 17 17 0 1 1-17-17"/></svg>
+          <div class="podpis">zdjęcie wyrobu</div>
+        </div>
+        <div class="tresc">
+          <h3>Naszyjnik ze spiralą</h3>
+          <p class="kamien">miedź kuta, polerowana</p>
+          <div class="dol"><span class="cena">wycena</span><span class="stan zam">NA ZAMÓWIENIE</span></div>
+        </div>
+      </div>
+
+      <div class="wyrob">
+        <div class="foto ciemna">
+          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" stroke="#d99a5e" stroke-width="3" stroke-linecap="round"><path d="M60 24a36 36 0 1 1-25 61"/><circle cx="60" cy="24" r="7" fill="#9fb8c9" stroke="none"/><circle cx="40" cy="32" r="5" fill="#c9a26b" stroke="none"/><circle cx="80" cy="32" r="5" fill="#8fb39a" stroke="none"/></svg>
+          <div class="podpis">zdjęcie wyrobu</div>
+        </div>
+        <div class="tresc">
+          <h3>Bransoleta z kamieniami</h3>
+          <p class="kamien">kamień słoneczny · miedź</p>
+          <div class="dol"><span class="cena">210 zł</span><span class="stan jest">DOSTĘPNA</span></div>
+        </div>
+      </div>
+
+      <div class="wyrob">
+        <div class="foto">
+          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" stroke="#a8622a" stroke-width="3" stroke-linecap="round"><circle cx="60" cy="60" r="30"/><circle cx="60" cy="60" r="13"/><circle cx="60" cy="30" r="5" fill="#8fb39a" stroke="none"/><circle cx="90" cy="60" r="5" fill="#9fb8c9" stroke="none"/><circle cx="60" cy="90" r="5" fill="#c9a26b" stroke="none"/><circle cx="30" cy="60" r="5" fill="#b08a9e" stroke="none"/></svg>
+          <div class="podpis">zdjęcie wyrobu</div>
+        </div>
+        <div class="tresc">
+          <h3>Duży wisior „koło"</h3>
+          <p class="kamien">siedem kamieni · miedź</p>
+          <div class="dol"><span class="cena">260 zł</span><span class="stan jest">DOSTĘPNY</span></div>
+        </div>
+      </div>
+
+      <div class="wyrob">
+        <div class="foto ciemna">
+          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" stroke="#d99a5e" stroke-width="3" stroke-linecap="round"><path d="M44 28a12 12 0 0 1 24 0"/><path d="M44 28v12"/><circle cx="44" cy="54" r="12" fill="#d7c08a" stroke="#d99a5e"/><path d="M76 40v12"/><circle cx="76" cy="66" r="10" fill="#9fb8c9" stroke="#d99a5e"/></svg>
+          <div class="podpis">zdjęcie wyrobu</div>
+        </div>
+        <div class="tresc">
+          <h3>Kolczyki z kamykiem</h3>
+          <p class="kamien">do wyboru kamień</p>
+          <div class="dol"><span class="cena">90 zł</span><span class="stan jest">DOSTĘPNE</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="jak">
+  <div class="srodek">
+    <div class="naglowek">
+      <span>Jak to działa</span>
+      <h2>Bez koszyka i płatności online</h2>
+      <p>Rękodzieło to nie sklep z półki. Piszemy, ustalamy, rezerwuję sztukę dla Ciebie.</p>
+    </div>
+    <div class="siatka k3">
+      <div class="krok"><div class="numer">1</div><h3>Piszesz</h3><p>Wybierasz, co Ci się podoba, i wysyłasz wiadomość. Możesz też zapytać o coś zupełnie własnego.</p></div>
+      <div class="krok"><div class="numer">2</div><h3>Ustalamy</h3><p>Rozmiar, kamień, wykończenie. Przy wyrobie na zamówienie podaję cenę po rozmowie.</p></div>
+      <div class="krok"><div class="numer">3</div><h3>Rezerwuję i wysyłam</h3><p>Odkładam sztukę dla Ciebie i wysyłam pod wskazany adres albo oddaję osobiście na jarmarku.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="omnie" style="background:#f1e9dd">
+  <div class="srodek">
+    <div class="omnie">
+      <div class="foto ciemna" style="border-radius:20px">
+        <svg width="110" height="110" viewBox="0 0 120 120" fill="none" stroke="#d99a5e" stroke-width="3" stroke-linecap="round"><circle cx="60" cy="40" r="18"/><path d="M26 100c0-18 15-28 34-28s34 10 34 28"/><path d="M86 60l14-14M94 40l10 10" opacity=".6"/></svg>
+        <div class="podpis">zdjęcie przy pracy</div>
+      </div>
+      <div>
+        <div class="naglowek" style="text-align:left;margin-bottom:14px">
+          <span>O mnie</span>
+          <h2>Kuję miedź, bo lubię</h2>
+        </div>
+        <p>Tu wejdzie kilka zdań Twoimi słowami: skąd jesteś, od kiedy kujesz miedź, skąd bierzesz kamienie i dlaczego akurat to robisz.</p>
+        <p>Ludzie często pytają o kamienie — warto napisać, jakie najczęściej stosujesz i czy dobierasz je pod osobę.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="jarmarki">
+  <div class="srodek" style="max-width:620px">
+    <div class="naglowek">
+      <span>Gdzie mnie spotkać</span>
+      <h2>Jarmarki i targi</h2>
+      <p>Najłatwiej wybrać wyrób na żywo — przymierzyć, potrzymać w dłoni.</p>
+    </div>
+    <div class="jarmark">
+      <div class="data"><b>19</b><span>paź</span></div>
+      <div><b class="co">Jarmark rękodzieła</b><p>przykładowy wpis — tu wejdą prawdziwe terminy</p></div>
+    </div>
+    <div class="jarmark">
+      <div class="data"><b>02</b><span>lis</span></div>
+      <div><b class="co">Targi slow life</b><p>przykładowy wpis</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" style="background:#f1e9dd">
+  <div class="srodek">
+    <div class="naglowek">
+      <span>Kontakt</span>
+      <h2>Chcę kupić albo mam pytanie</h2>
+    </div>
+    <form class="form" onsubmit="event.preventDefault();this.querySelector('button').textContent='To na razie pokaz — formularz podłączymy później';">
+      <label for="imie">Imię</label>
+      <input id="imie" placeholder="Jak się do Ciebie zwracać">
+      <label for="kon">Telefon albo e-mail</label>
+      <input id="kon" placeholder="Żebym mógł odpisać">
+      <label for="wiad">Wiadomość</label>
+      <textarea id="wiad" placeholder="Co Cię interesuje? Możesz podać rozmiar nadgarstka."></textarea>
+      <div class="zgoda"><input type="checkbox" style="width:auto;margin:3px 0 0"><span>Zgadzam się na kontakt w sprawie mojego pytania.</span></div>
+      <button type="submit">Wyślij wiadomość</button>
+      <p class="mala">Odpisuję zwykle tego samego dnia.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="srodek">
+    <div class="ikony">
+      <a href="https://www.facebook.com/profile.php?id=100078696184625" aria-label="Facebook"><svg width="19" height="19" viewBox="0 0 24 24" fill="#fff"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4v-2c0-.6.4-1 1-1z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="#fff" stroke="none"/></svg></a>
+    </div>
+    <p class="zegnaj">Pięknego życia</p>
+    <p style="margin:0">Dmytro Nowy · ręcznie kute wyroby z miedzi</p>
+    <p class="info">Strona pokazowa, przygotowana do obejrzenia przed uruchomieniem.
+      Rysunki w miejscach zdjęć, ceny i terminy jarmarków są przykładowe —
+      wejdą prawdziwe zdjęcia i dane. Formularz nie wysyła jeszcze wiadomości.</p>
+  </div>
+</footer>
+
+<nav class="pasek">
+  <a class="akt" href="#gora"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l8-7 8 7v8a1 1 0 01-1 1h-5v-6h-4v6H5a1 1 0 01-1-1z"/></svg>Start</a>
+  <a href="#wyroby"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>Wyroby</a>
+  <a href="#jarmarki"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-9a7 7 0 0114 0c0 4.5-7 9-7 9z"/><circle cx="12" cy="12" r="2.4"/></svg>Jarmarki</a>
+  <a href="#omnie"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg>O mnie</a>
+  <a href="#kontakt"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg>Kontakt</a>
+</nav>
+
+<script>
+  const sekcje = [...document.querySelectorAll('section, header')];
+  const linki = [...document.querySelectorAll('.pasek a')];
+  addEventListener('scroll', () => {
+    const y = scrollY + 90;
+    let aktywna = 'gora';
+    sekcje.forEach(s => { if (s.offsetTop <= y) aktywna = s.id || aktywna; });
+    linki.forEach(a => a.classList.toggle('akt', a.getAttribute('href') === '#' + aktywna));
+  }, { passive: true });
+</script>
+</body>
+</html>
