@@ -77,12 +77,13 @@
   /* karta wyrobu */
   .wyrob{background:var(--karta);border:1px solid var(--kreska);border-radius:20px;overflow:hidden;
          display:flex;flex-direction:column}
-  .foto{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;position:relative;
+  .foto{aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;position:relative;
         background:linear-gradient(145deg,#efe2d2 0%,#e4d2bc 55%,#d9c4a9 100%)}
   .foto.ciemna{background:linear-gradient(145deg,#4a3728 0%,#35261a 100%)}
   .foto .podpis{position:absolute;bottom:8px;left:0;right:0;text-align:center;font-size:10px;
                 letter-spacing:.1em;text-transform:uppercase;color:rgba(70,50,35,.5)}
   .foto.ciemna .podpis{color:rgba(232,201,168,.45)}
+  .foto img{width:100%;height:100%;object-fit:cover}
   .wyrob .tresc{padding:14px 16px 17px}
   .wyrob h3{margin:0;font-size:17px;font-weight:600}
   .wyrob .kamien{margin:3px 0 0;font-size:13px;color:var(--tekst-2)}
@@ -104,6 +105,8 @@
   .omnie{display:grid;gap:20px;align-items:center}
   @media(min-width:760px){ .omnie{grid-template-columns:300px 1fr} }
   .omnie .foto{border-radius:20px;aspect-ratio:4/5}
+  .hero-foto{width:210px;margin:26px auto 0;border-radius:20px;overflow:hidden;
+       box-shadow:0 20px 44px rgba(0,0,0,.5);border:1px solid rgba(217,154,94,.35)}
   .omnie p{font-size:15.5px;color:var(--tekst-2)}
 
   /* jarmarki */
@@ -165,19 +168,7 @@
     <div class="etykieta">Rękodzieło z miedzi</div>
     <h1>Dmytro Nowy</h1>
     <p class="pod">Ręcznie kute bransolety, wisiorki i naszyjniki<br>z naturalnymi kamieniami</p>
-    <div class="rysunek">
-      <svg viewBox="0 0 300 150" fill="none" stroke="#d99a5e" stroke-width="2.6" stroke-linecap="round">
-        <path d="M150 28c40 0 72 30 72 62 0 18-10 30-24 30" opacity=".95"/>
-        <path d="M150 28c-40 0-72 30-72 62 0 18 10 30 24 30" opacity=".95"/>
-        <path d="M150 42c32 0 58 24 58 50" opacity=".45"/>
-        <path d="M150 42c-32 0-58 24-58 50" opacity=".45"/>
-        <circle cx="150" cy="28" r="9" fill="#e8c9a8" stroke="none"/>
-        <circle cx="197" cy="52" r="6" fill="#8aa98a" stroke="none"/>
-        <circle cx="103" cy="52" r="6" fill="#9fb8c9" stroke="none"/>
-        <path d="M222 120a7 7 0 1 0-7-7 11 11 0 1 0 11 11" opacity=".9"/>
-        <path d="M78 120a7 7 0 1 1 7-7 11 11 0 1 1-11 11" opacity=".9"/>
-      </svg>
-    </div>
+    <div class="hero-foto"><img src="img/wyrob-1.jpg" alt="Bransoleta z czarnym agatem na nadgarstku"></div>
     <p class="cytat">„Kamienie są naturalne.<br>Zrobione z dobrej energii."</p>
     <div class="cta">
       <a class="guzik glowny" href="#wyroby">Zobacz wyroby</a>
@@ -231,77 +222,61 @@
     <div class="siatka k3">
 
       <div class="wyrob">
-        <div class="foto">
-          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" stroke="#a8622a" stroke-width="3" stroke-linecap="round"><path d="M60 22a38 38 0 1 1-27 64.6"/><circle cx="60" cy="22" r="8" fill="#3d3a42" stroke="none"/><circle cx="92" cy="42" r="5" fill="#7d7a85" stroke="none"/><path d="M33 86.6a9 9 0 1 0 9-9" /></svg>
-          <div class="podpis">zdjęcie wyrobu</div>
-        </div>
+        <div class="foto"><img src="img/wyrob-1.jpg" alt="Bransoleta z agatem — czarny agat · miedź kuta" loading="lazy"></div>
         <div class="tresc">
-          <h3>Bransoleta kuta</h3>
-          <p class="kamien">czarny turmalin · miedź</p>
+          <h3>Bransoleta z agatem</h3>
+          <p class="kamien">czarny agat · miedź kuta</p>
           <div class="dol"><span class="cena">180 zł</span><span class="stan jest">DOSTĘPNA</span></div>
         </div>
       </div>
 
       <div class="wyrob">
-        <div class="foto ciemna">
-          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" stroke="#d99a5e" stroke-width="3" stroke-linecap="round"><path d="M44 26a16 16 0 0 1 32 0"/><ellipse cx="60" cy="70" rx="20" ry="28" fill="#8fb39a" stroke="#d99a5e"/><path d="M60 42v6M48 56c8 6 16 6 24 0M48 76c8 6 16 6 24 0"/></svg>
-          <div class="podpis">zdjęcie wyrobu</div>
-        </div>
+        <div class="foto"><img src="img/wyrob-2.jpg" alt="Bransoleta oplatana — czarny turmalin · surowe kamienie" loading="lazy"></div>
         <div class="tresc">
-          <h3>Wisiorek oplatany</h3>
-          <p class="kamien">prehnit · rzemyk</p>
-          <div class="dol"><span class="cena">140 zł</span><span class="stan nie">SPRZEDANY</span></div>
+          <h3>Bransoleta oplatana</h3>
+          <p class="kamien">czarny turmalin · surowe kamienie</p>
+          <div class="dol"><span class="cena">160 zł</span><span class="stan jest">DOSTĘPNA</span></div>
         </div>
       </div>
 
       <div class="wyrob">
-        <div class="foto">
-          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" stroke="#a8622a" stroke-width="3" stroke-linecap="round"><path d="M22 36a38 38 0 0 0 76 0"/><path d="M60 64a10 10 0 1 1 10 10 17 17 0 1 1-17-17"/></svg>
-          <div class="podpis">zdjęcie wyrobu</div>
-        </div>
+        <div class="foto"><img src="img/wyrob-3.jpg" alt="Bransoleta ze spiralami — cytryn · miedź kuta" loading="lazy"></div>
         <div class="tresc">
-          <h3>Naszyjnik ze spiralą</h3>
-          <p class="kamien">miedź kuta, polerowana</p>
-          <div class="dol"><span class="cena">wycena</span><span class="stan zam">NA ZAMÓWIENIE</span></div>
+          <h3>Bransoleta ze spiralami</h3>
+          <p class="kamien">cytryn · miedź kuta</p>
+          <div class="dol"><span class="cena">190 zł</span><span class="stan jest">DOSTĘPNA</span></div>
         </div>
       </div>
 
       <div class="wyrob">
-        <div class="foto ciemna">
-          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" stroke="#d99a5e" stroke-width="3" stroke-linecap="round"><path d="M60 24a36 36 0 1 1-25 61"/><circle cx="60" cy="24" r="7" fill="#9fb8c9" stroke="none"/><circle cx="40" cy="32" r="5" fill="#c9a26b" stroke="none"/><circle cx="80" cy="32" r="5" fill="#8fb39a" stroke="none"/></svg>
-          <div class="podpis">zdjęcie wyrobu</div>
-        </div>
+        <div class="foto"><img src="img/wyrob-4.jpg" alt="Bransoleta z ametystami — ametyst · pięć kamieni" loading="lazy"></div>
         <div class="tresc">
-          <h3>Bransoleta z kamieniami</h3>
-          <p class="kamien">kamień słoneczny · miedź</p>
-          <div class="dol"><span class="cena">210 zł</span><span class="stan jest">DOSTĘPNA</span></div>
+          <h3>Bransoleta z ametystami</h3>
+          <p class="kamien">ametyst · pięć kamieni</p>
+          <div class="dol"><span class="cena">220 zł</span><span class="stan jest">DOSTĘPNA</span></div>
         </div>
       </div>
 
       <div class="wyrob">
-        <div class="foto">
-          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" stroke="#a8622a" stroke-width="3" stroke-linecap="round"><circle cx="60" cy="60" r="30"/><circle cx="60" cy="60" r="13"/><circle cx="60" cy="30" r="5" fill="#8fb39a" stroke="none"/><circle cx="90" cy="60" r="5" fill="#9fb8c9" stroke="none"/><circle cx="60" cy="90" r="5" fill="#c9a26b" stroke="none"/><circle cx="30" cy="60" r="5" fill="#b08a9e" stroke="none"/></svg>
-          <div class="podpis">zdjęcie wyrobu</div>
-        </div>
+        <div class="foto"><img src="img/wyrob-5.jpg" alt="Bransoleta szlifowana — czarny turmalin · spirale" loading="lazy"></div>
         <div class="tresc">
-          <h3>Duży wisior „koło"</h3>
-          <p class="kamien">siedem kamieni · miedź</p>
-          <div class="dol"><span class="cena">260 zł</span><span class="stan jest">DOSTĘPNY</span></div>
+          <h3>Bransoleta szlifowana</h3>
+          <p class="kamien">czarny turmalin · spirale</p>
+          <div class="dol"><span class="cena">200 zł</span><span class="stan nie">SPRZEDANA</span></div>
         </div>
       </div>
 
       <div class="wyrob">
         <div class="foto ciemna">
-          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" stroke="#d99a5e" stroke-width="3" stroke-linecap="round"><path d="M44 28a12 12 0 0 1 24 0"/><path d="M44 28v12"/><circle cx="44" cy="54" r="12" fill="#d7c08a" stroke="#d99a5e"/><path d="M76 40v12"/><circle cx="76" cy="66" r="10" fill="#9fb8c9" stroke="#d99a5e"/></svg>
-          <div class="podpis">zdjęcie wyrobu</div>
+          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" stroke="#d99a5e" stroke-width="3" stroke-linecap="round"><path d="M44 26a16 16 0 0 1 32 0"/><ellipse cx="60" cy="70" rx="20" ry="28" fill="#8fb39a" stroke="#d99a5e"/><path d="M60 42v6M48 56c8 6 16 6 24 0"/></svg>
+          <div class="podpis">wisiorki — zdjęcia wkrótce</div>
         </div>
         <div class="tresc">
-          <h3>Kolczyki z kamykiem</h3>
-          <p class="kamien">do wyboru kamień</p>
-          <div class="dol"><span class="cena">90 zł</span><span class="stan jest">DOSTĘPNE</span></div>
+          <h3>Wisiorki i naszyjniki</h3>
+          <p class="kamien">kamień oplatany miedzią</p>
+          <div class="dol"><span class="cena">zapytaj</span><span class="stan zam">NA ZAMÓWIENIE</span></div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -387,8 +362,8 @@
     <p class="zegnaj">Pięknego życia</p>
     <p style="margin:0">Dmytro Nowy · ręcznie kute wyroby z miedzi</p>
     <p class="info">Strona pokazowa, przygotowana do obejrzenia przed uruchomieniem.
-      Rysunki w miejscach zdjęć, ceny i terminy jarmarków są przykładowe —
-      wejdą prawdziwe zdjęcia i dane. Formularz nie wysyła jeszcze wiadomości.</p>
+      Zdjęcia bransolet są prawdziwe, z profilu Dmytro. Ceny i terminy jarmarków
+      są przykładowe — wejdą prawdziwe. Formularz nie wysyła jeszcze wiadomości.</p>
   </div>
 </footer>
 
