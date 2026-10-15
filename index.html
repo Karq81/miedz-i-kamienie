@@ -4,147 +4,180 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Miedź i kamienie — ręcznie kute wyroby Dmytro Nowy</title>
+<title>Miedź i kamienie — ręcznie kute wyroby, Dmytro Nowy</title>
 <meta name="description" content="Ręcznie kute bransolety, wisiorki i naszyjniki z miedzi z naturalnymi kamieniami. Każda sztuka jedyna w swoim rodzaju.">
+
+<!-- zeby link wyslany na Messengerze albo WhatsAppie pokazywal ladna zajawke ze zdjeciem -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Miedź i kamienie — ręcznie kute wyroby">
+<meta property="og:description" content="Bransolety, wisiorki i naszyjniki kute w miedzi, z naturalnymi kamieniami. Każda sztuka jedna.">
+<meta property="og:image" content="https://karq81.github.io/miedz-i-kamienie/img/wyrob-1.jpg">
+<meta property="og:url" content="https://karq81.github.io/miedz-i-kamienie/">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2b211a">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232b211a'/%3E%3Cpath d='M16 7a9 9 0 1 1-6.4 15.3' fill='none' stroke='%23d99a5e' stroke-width='2.4' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='7' r='2.6' fill='%23e8c9a8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+
 <style>
   :root{
     --miedz:#b87333; --miedz-ciemna:#8c4a1e; --miedz-jasna:#d99a5e; --miedz-blada:#e8c9a8;
-    --patyna:#5f7a5a; --krem:#f7f2ea; --karta:#fffdfa; --ciemny:#2b211a;
+    --krem:#f7f2ea; --krem2:#f1e7d9; --karta:#fffdfa; --ciemny:#2b211a;
     --tekst:#2e231c; --tekst-2:#6f5f50; --kreska:#e6dccd;
+    --ozdobny:"Cormorant Garamond",Georgia,serif;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--krem);color:var(--tekst);
-       font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65;
-       padding-bottom:64px}
+       font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65;padding-bottom:64px}
   img,svg{display:block;max-width:100%}
-  .srodek{max-width:960px;margin:0 auto;padding:0 20px}
+  .srodek{max-width:980px;margin:0 auto;padding:0 20px}
 
-  /* górny pasek */
-  .gora{position:sticky;top:0;z-index:40;background:rgba(247,242,234,.94);
-        backdrop-filter:blur(8px);border-bottom:1px solid var(--kreska)}
-  .gora .srodek{display:flex;align-items:center;justify-content:space-between;height:58px}
-  .marka{font-size:14px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;
+  .gora{position:sticky;top:0;z-index:40;background:rgba(247,242,234,.93);
+        backdrop-filter:blur(10px);border-bottom:1px solid var(--kreska)}
+  .gora .srodek{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .marka{font-family:var(--ozdobny);font-size:22px;font-weight:600;
          color:var(--miedz-ciemna);text-decoration:none}
   .jezyki{display:flex;gap:5px}
   .jezyki a{font-size:11px;padding:4px 9px;border:1px solid var(--kreska);border-radius:20px;
             color:var(--tekst-2);text-decoration:none}
   .jezyki a.akt{background:var(--miedz);color:#fff;border-color:var(--miedz)}
-  .menu{display:none;gap:22px}
-  .menu a{color:var(--tekst);text-decoration:none;font-size:15px}
-  .menu a:hover{color:var(--miedz-ciemna)}
-  @media(min-width:860px){ .menu{display:flex} body{padding-bottom:0} .pasek{display:none!important} }
+  .menu{display:none;gap:24px}
+  .menu a{color:var(--tekst);text-decoration:none;font-size:15px;position:relative}
+  .menu a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1.5px;
+                 background:var(--miedz);transition:right .25s}
+  .menu a:hover::after{right:0}
+  @media(min-width:880px){ .menu{display:flex} body{padding-bottom:0} .pasek{display:none!important} }
 
-  /* hero */
-  .hero{position:relative;overflow:hidden;
-        background:radial-gradient(120% 90% at 20% 0%,#3b2a1d 0%,#231a13 55%,#1b140e 100%);
-        color:#f6ece0;text-align:center;padding:46px 0 52px}
-  .hero .etykieta{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--miedz-jasna)}
-  .hero h1{font-size:40px;line-height:1.1;margin:12px 0 0;letter-spacing:-.8px}
-  .hero .pod{color:#d9c6b2;margin:12px auto 0;max-width:420px;font-size:16px}
-  .hero .cytat{margin:22px auto 0;max-width:380px;font-style:italic;color:var(--miedz-blada);font-size:16px}
-  .hero .rysunek{margin:26px auto 0;max-width:300px}
-  .cta{display:flex;gap:10px;justify-content:center;margin-top:28px;flex-wrap:wrap}
-  .guzik{display:inline-block;padding:13px 26px;border-radius:30px;font-size:15px;font-weight:600;
-         text-decoration:none;border:1.5px solid transparent}
+  .hero{position:relative;overflow:hidden;color:#f6ece0;text-align:center;padding:52px 0 58px}
+  .hero .tlo{position:absolute;inset:0;background:url("img/wyrob-3.jpg") center/cover;
+             filter:blur(14px) saturate(.75);transform:scale(1.15);opacity:.5}
+  .hero .mgla{position:absolute;inset:0;
+       background:linear-gradient(180deg,rgba(28,20,14,.86) 0%,rgba(35,26,19,.9) 55%,rgba(28,20,14,.95) 100%)}
+  .hero .srodek{position:relative}
+  .hero .etykieta{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--miedz-jasna)}
+  .hero h1{font-family:var(--ozdobny);font-size:52px;line-height:1.05;margin:10px 0 0;font-weight:600}
+  .hero .pod{color:#dcc9b4;margin:14px auto 0;max-width:420px;font-size:16.5px}
+  .hero-foto{width:220px;margin:28px auto 0;border-radius:22px;overflow:hidden;
+       box-shadow:0 24px 50px rgba(0,0,0,.55);border:1px solid rgba(217,154,94,.4)}
+  .hero .cytat{font-family:var(--ozdobny);font-size:21px;margin:26px auto 0;max-width:400px;
+               color:var(--miedz-blada);font-style:italic}
+  .cta{display:flex;gap:10px;justify-content:center;margin-top:26px;flex-wrap:wrap}
+  .guzik{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:30px;
+         font-size:15px;font-weight:600;text-decoration:none;border:1.5px solid transparent;
+         transition:transform .15s,background .2s}
+  .guzik:active{transform:scale(.97)}
   .glowny{background:var(--miedz);color:#fff}
   .glowny:hover{background:var(--miedz-ciemna)}
-  .drugi{border-color:rgba(232,201,168,.55);color:var(--miedz-blada)}
-  .drugi:hover{border-color:var(--miedz-blada)}
+  .drugi{border-color:rgba(232,201,168,.5);color:var(--miedz-blada)}
+  .drugi:hover{border-color:var(--miedz-blada);background:rgba(232,201,168,.08)}
 
-  /* pasek zaufania */
-  .zaufanie{background:var(--ciemny);color:#cbb8a4;font-size:13px;padding:11px 0}
-  .zaufanie .srodek{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+  .zaufanie{background:var(--ciemny);color:#cbb8a4;font-size:13px;padding:12px 0}
+  .zaufanie .srodek{display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
   .zaufanie b{color:var(--miedz-jasna);font-weight:600}
 
-  section{padding:46px 0}
-  .naglowek{text-align:center;margin-bottom:28px}
-  .naglowek span{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--miedz-ciemna)}
-  .naglowek h2{font-size:28px;margin:8px 0 0;letter-spacing:-.4px}
-  .naglowek p{color:var(--tekst-2);margin:8px auto 0;max-width:460px;font-size:15px}
+  section{padding:52px 0}
+  .naglowek{text-align:center;margin-bottom:30px}
+  .naglowek span{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--miedz-ciemna)}
+  .naglowek h2{font-family:var(--ozdobny);font-size:36px;margin:6px 0 0;font-weight:600}
+  .naglowek p{color:var(--tekst-2);margin:10px auto 0;max-width:470px;font-size:15.5px}
+  .ozdoba{width:54px;height:1.5px;background:var(--miedz-jasna);margin:14px auto 0;opacity:.7}
 
-  .siatka{display:grid;gap:14px}
+  .siatka{display:grid;gap:16px}
   .k2{grid-template-columns:1fr 1fr}
   @media(min-width:720px){ .k2{grid-template-columns:repeat(4,1fr)} .k3{grid-template-columns:repeat(3,1fr)} }
 
-  .kat{background:var(--karta);border:1px solid var(--kreska);border-radius:18px;padding:18px 14px;
-       text-align:center;text-decoration:none;color:var(--tekst)}
-  .kat:hover{border-color:var(--miedz-jasna)}
-  .kat svg{margin:0 auto 8px}
+  .kat{background:var(--karta);border:1px solid var(--kreska);border-radius:18px;padding:20px 14px;
+       text-align:center;text-decoration:none;color:var(--tekst);transition:.2s}
+  .kat:hover{border-color:var(--miedz-jasna);transform:translateY(-3px)}
+  .kat svg{margin:0 auto 10px}
   .kat b{font-size:15px;font-weight:600}
   .kat p{margin:3px 0 0;font-size:12px;color:var(--tekst-2)}
 
-  /* karta wyrobu */
+  .filtry{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
+  .filtry button{padding:9px 18px;border-radius:30px;border:1px solid var(--kreska);
+       background:var(--karta);color:var(--tekst-2);font:inherit;font-size:14px;cursor:pointer}
+  .filtry button.akt{background:var(--miedz);color:#fff;border-color:var(--miedz)}
+
   .wyrob{background:var(--karta);border:1px solid var(--kreska);border-radius:20px;overflow:hidden;
-         display:flex;flex-direction:column}
+         display:flex;flex-direction:column;transition:.25s}
+  .wyrob:hover{box-shadow:0 14px 30px rgba(70,50,35,.11);transform:translateY(-3px)}
   .foto{aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;position:relative;
-        background:linear-gradient(145deg,#efe2d2 0%,#e4d2bc 55%,#d9c4a9 100%)}
+        background:linear-gradient(145deg,#efe2d2 0%,#e4d2bc 55%,#d9c4a9 100%);overflow:hidden}
   .foto.ciemna{background:linear-gradient(145deg,#4a3728 0%,#35261a 100%)}
-  .foto .podpis{position:absolute;bottom:8px;left:0;right:0;text-align:center;font-size:10px;
-                letter-spacing:.1em;text-transform:uppercase;color:rgba(70,50,35,.5)}
-  .foto.ciemna .podpis{color:rgba(232,201,168,.45)}
-  .foto img{width:100%;height:100%;object-fit:cover}
-  .wyrob .tresc{padding:14px 16px 17px}
-  .wyrob h3{margin:0;font-size:17px;font-weight:600}
+  .foto img{width:100%;height:100%;object-fit:cover;cursor:zoom-in;transition:transform .4s}
+  .wyrob:hover .foto img{transform:scale(1.04)}
+  .foto .podpis{position:absolute;bottom:10px;left:0;right:0;text-align:center;font-size:10px;
+                letter-spacing:.1em;text-transform:uppercase;color:rgba(232,201,168,.5)}
+  .wyrob .tresc{padding:15px 17px 18px}
+  .wyrob h3{margin:0;font-size:18px;font-weight:600}
   .wyrob .kamien{margin:3px 0 0;font-size:13px;color:var(--tekst-2)}
-  .dol{display:flex;align-items:center;justify-content:space-between;margin-top:11px;gap:8px}
-  .cena{font-size:17px;font-weight:700;color:var(--miedz-ciemna)}
-  .stan{font-size:10.5px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.04em}
+  .dol{display:flex;align-items:center;justify-content:space-between;margin-top:12px;gap:8px}
+  .cena{font-size:18px;font-weight:700;color:var(--miedz-ciemna)}
+  .stan{font-size:10.5px;font-weight:700;padding:4px 10px;border-radius:20px}
   .jest{background:#e5efe1;color:#3f5e36}
   .nie{background:#f0e3e3;color:#7d3d3d}
   .zam{background:#f5e9d9;color:var(--miedz-ciemna)}
 
-  /* kroki */
-  .krok{background:var(--karta);border:1px solid var(--kreska);border-radius:18px;padding:20px}
-  .numer{width:34px;height:34px;border-radius:50%;background:var(--miedz);color:#fff;
-         display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:10px}
-  .krok h3{margin:0 0 5px;font-size:17px}
-  .krok p{margin:0;font-size:14px;color:var(--tekst-2)}
+  .krok{background:var(--karta);border:1px solid var(--kreska);border-radius:18px;padding:22px}
+  .numer{width:36px;height:36px;border-radius:50%;background:var(--miedz);color:#fff;
+         display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:12px}
+  .krok h3{margin:0 0 6px;font-size:17.5px}
+  .krok p{margin:0;font-size:14.5px;color:var(--tekst-2)}
 
-  /* o mnie */
-  .omnie{display:grid;gap:20px;align-items:center}
-  @media(min-width:760px){ .omnie{grid-template-columns:300px 1fr} }
-  .omnie .foto{border-radius:20px;aspect-ratio:4/5}
-  .hero-foto{width:210px;margin:26px auto 0;border-radius:20px;overflow:hidden;
-       box-shadow:0 20px 44px rgba(0,0,0,.5);border:1px solid rgba(217,154,94,.35)}
+  .omnie{display:grid;gap:24px;align-items:center}
+  @media(min-width:760px){ .omnie{grid-template-columns:320px 1fr} }
+  .omnie .foto{border-radius:22px;aspect-ratio:4/5}
   .omnie p{font-size:15.5px;color:var(--tekst-2)}
 
-  /* jarmarki */
   .jarmark{display:flex;gap:14px;align-items:center;background:var(--karta);
-           border:1px solid var(--kreska);border-radius:16px;padding:14px;margin-bottom:10px}
-  .data{background:var(--miedz);color:#fff;border-radius:12px;width:56px;flex:none;text-align:center;padding:7px 0}
-  .data b{display:block;font-size:19px;line-height:1.1}
+           border:1px solid var(--kreska);border-radius:16px;padding:15px;margin-bottom:10px}
+  .data{background:var(--miedz);color:#fff;border-radius:12px;width:58px;flex:none;text-align:center;padding:7px 0}
+  .data b{display:block;font-size:20px;line-height:1.1}
   .data span{font-size:10px;text-transform:uppercase;letter-spacing:.08em}
   .jarmark b.co{font-size:15.5px}
   .jarmark p{margin:0;font-size:13px;color:var(--tekst-2)}
 
-  /* formularz */
-  .form{background:var(--karta);border:1px solid var(--kreska);border-radius:22px;padding:22px;
-        max-width:520px;margin:0 auto}
+  .form{background:var(--karta);border:1px solid var(--kreska);border-radius:24px;padding:26px;
+        max-width:540px;margin:0 auto}
   .form label{display:block;font-size:13px;color:var(--tekst-2);margin:0 0 5px}
-  .form input,.form textarea{width:100%;padding:12px 14px;border:1px solid var(--kreska);
-       border-radius:12px;font:inherit;background:#fff;margin-bottom:13px}
-  .form textarea{min-height:92px;resize:vertical}
+  .form input,.form textarea{width:100%;padding:13px 15px;border:1px solid var(--kreska);
+       border-radius:13px;font:inherit;background:#fff;margin-bottom:14px}
+  .form textarea{min-height:96px;resize:vertical}
   .form input:focus,.form textarea:focus{outline:none;border-color:var(--miedz)}
-  .zgoda{display:flex;gap:10px;font-size:12.5px;color:var(--tekst-2);margin-bottom:16px}
-  .form button{width:100%;padding:14px;border:0;border-radius:30px;background:var(--miedz);
+  .zgoda{display:flex;gap:10px;font-size:12.5px;color:var(--tekst-2);margin-bottom:18px}
+  .form button{width:100%;padding:15px;border:0;border-radius:30px;background:var(--miedz);
        color:#fff;font-size:16px;font-weight:600;cursor:pointer}
   .form button:hover{background:var(--miedz-ciemna)}
-  .mala{font-size:12.5px;color:var(--tekst-2);text-align:center;margin:12px 0 0}
+  .albo{text-align:center;margin:18px 0 0;color:var(--tekst-2);font-size:14px}
+  .messenger{display:inline-flex;align-items:center;gap:9px;margin-top:10px;padding:12px 24px;
+      border-radius:30px;background:var(--ciemny);color:#f0e2d2;text-decoration:none;font-weight:600;font-size:15px}
 
-  footer{background:var(--ciemny);color:#b9a692;padding:34px 0 40px;text-align:center;font-size:14px}
-  footer .ikony{display:flex;gap:14px;justify-content:center;margin-bottom:16px}
-  footer .ikony a{width:40px;height:40px;border-radius:50%;background:rgba(184,115,51,.9);
+  footer{background:var(--ciemny);color:#b9a692;padding:40px 0 44px;text-align:center;font-size:14px}
+  footer .ikony{display:flex;gap:14px;justify-content:center;margin-bottom:18px}
+  footer .ikony a{width:42px;height:42px;border-radius:50%;background:rgba(184,115,51,.9);
                   display:flex;align-items:center;justify-content:center}
-  footer .zegnaj{color:var(--miedz-jasna);font-size:16px;margin:0 0 14px}
-  footer .info{font-size:11.5px;color:#7e7064;margin:18px auto 0;max-width:460px;line-height:1.6}
+  footer .zegnaj{font-family:var(--ozdobny);color:var(--miedz-jasna);font-size:24px;margin:0 0 12px}
+  footer .info{font-size:11.5px;color:#7e7064;margin:22px auto 0;max-width:480px;line-height:1.6}
 
-  /* dolny pasek */
   .pasek{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--karta);
          border-top:1px solid var(--kreska);display:flex;padding:8px 0 11px}
   .pasek a{flex:1;text-align:center;font-size:10px;color:var(--tekst-2);text-decoration:none}
   .pasek a svg{margin:0 auto 3px}
   .pasek a.akt{color:var(--miedz-ciemna);font-weight:700}
+
+  .lupa{position:fixed;inset:0;z-index:90;background:rgba(20,14,10,.94);display:none;
+        align-items:center;justify-content:center;padding:20px;cursor:zoom-out}
+  .lupa.widac{display:flex}
+  .lupa img{max-width:100%;max-height:86vh;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+  .lupa .zamknij{position:absolute;top:16px;right:20px;color:#e8c9a8;font-size:30px;line-height:1}
+
+  .pokaz{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .pokaz.widoczna{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){ .pokaz{opacity:1;transform:none;transition:none} }
 </style>
 </head>
 <body>
@@ -164,6 +197,7 @@
 </div>
 
 <header class="hero" id="gora">
+  <div class="tlo"></div><div class="mgla"></div>
   <div class="srodek">
     <div class="etykieta">Rękodzieło z miedzi</div>
     <h1>Dmytro Nowy</h1>
@@ -187,108 +221,101 @@
 
 <section id="kategorie">
   <div class="srodek">
-    <div class="naglowek">
+    <div class="naglowek pokaz">
       <span>Co robię</span>
       <h2>Cztery rzeczy, z miedzi</h2>
+      <div class="ozdoba"></div>
     </div>
-    <div class="siatka k2">
+    <div class="siatka k2 pokaz">
       <a class="kat" href="#wyroby">
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#b87333" stroke-width="2.4"><path d="M20 7a13 13 0 1 1-9 22.4"/><circle cx="20" cy="7" r="3.2" fill="#8c4a1e" stroke="none"/><circle cx="31" cy="15" r="2.4" fill="#5f7a5a" stroke="none"/></svg>
+        <svg width="42" height="42" viewBox="0 0 40 40" fill="none" stroke="#b87333" stroke-width="2.4"><path d="M20 7a13 13 0 1 1-9 22.4"/><circle cx="20" cy="7" r="3.2" fill="#8c4a1e" stroke="none"/><circle cx="31" cy="15" r="2.4" fill="#5f7a5a" stroke="none"/></svg>
         <b>Bransolety</b><p>kute i owijane</p>
       </a>
       <a class="kat" href="#wyroby">
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#b87333" stroke-width="2.4"><path d="M13 9a7 7 0 0 1 14 0"/><ellipse cx="20" cy="25" rx="7" ry="10" fill="#cfe0d6" stroke="#b87333"/><path d="M20 15v4"/></svg>
+        <svg width="42" height="42" viewBox="0 0 40 40" fill="none" stroke="#b87333" stroke-width="2.4"><path d="M13 9a7 7 0 0 1 14 0"/><ellipse cx="20" cy="25" rx="7" ry="10" fill="#cfe0d6" stroke="#b87333"/><path d="M20 15v4"/></svg>
         <b>Wisiorki</b><p>kamień w miedzi</p>
       </a>
       <a class="kat" href="#wyroby">
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#b87333" stroke-width="2.4"><path d="M9 11a13 13 0 0 0 22 0"/><path d="M20 23a4.5 4.5 0 1 1 4.5 4.5A8 8 0 1 1 17 19"/></svg>
+        <svg width="42" height="42" viewBox="0 0 40 40" fill="none" stroke="#b87333" stroke-width="2.4"><path d="M9 11a13 13 0 0 0 22 0"/><path d="M20 23a4.5 4.5 0 1 1 4.5 4.5A8 8 0 1 1 17 19"/></svg>
         <b>Naszyjniki</b><p>obręcze ze spiralą</p>
       </a>
       <a class="kat" href="#wyroby">
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#b87333" stroke-width="2.4"><path d="M14 10a5 5 0 0 1 10 0"/><path d="M14 10v5"/><circle cx="14" cy="21" r="5.2" fill="#d7c08a" stroke="#b87333"/><path d="M26 15v5"/><circle cx="26" cy="26" r="4.2" fill="#9fb8c9" stroke="#b87333"/></svg>
+        <svg width="42" height="42" viewBox="0 0 40 40" fill="none" stroke="#b87333" stroke-width="2.4"><path d="M14 10a5 5 0 0 1 10 0"/><path d="M14 10v5"/><circle cx="14" cy="21" r="5.2" fill="#d7c08a" stroke="#b87333"/><path d="M26 15v5"/><circle cx="26" cy="26" r="4.2" fill="#9fb8c9" stroke="#b87333"/></svg>
         <b>Kolczyki</b><p>lekkie, na co dzień</p>
       </a>
     </div>
   </div>
 </section>
 
-<section id="wyroby" style="background:#f1e9dd">
+<section id="wyroby" style="background:var(--krem2)">
   <div class="srodek">
-    <div class="naglowek">
+    <div class="naglowek pokaz">
       <span>Wyroby</span>
       <h2>Co teraz mam</h2>
+      <div class="ozdoba"></div>
       <p>Każda sztuka powstaje od początku do końca w moich rękach. Jak coś się sprzeda, mogę zrobić podobne — ale nigdy identyczne.</p>
     </div>
-    <div class="siatka k3">
 
-      <div class="wyrob">
-        <div class="foto"><img src="img/wyrob-1.jpg" alt="Bransoleta z agatem — czarny agat · miedź kuta" loading="lazy"></div>
-        <div class="tresc">
-          <h3>Bransoleta z agatem</h3>
-          <p class="kamien">czarny agat · miedź kuta</p>
-          <div class="dol"><span class="cena">180 zł</span><span class="stan jest">DOSTĘPNA</span></div>
-        </div>
+    <div class="filtry">
+      <button class="akt" data-f="wszystko">Wszystko</button>
+      <button data-f="bransoleta">Bransolety</button>
+      <button data-f="inne">Wisiorki i naszyjniki</button>
+    </div>
+
+    <div class="siatka k3" id="lista">
+
+      <div class="wyrob" data-kat="bransoleta">
+        <div class="foto"><img src="img/wyrob-1.jpg" alt="Bransoleta z czarnym agatem" loading="lazy"></div>
+        <div class="tresc"><h3>Bransoleta z agatem</h3><p class="kamien">czarny agat · miedź kuta</p>
+          <div class="dol"><span class="cena">180 zł</span><span class="stan jest">DOSTĘPNA</span></div></div>
       </div>
 
-      <div class="wyrob">
-        <div class="foto"><img src="img/wyrob-2.jpg" alt="Bransoleta oplatana — czarny turmalin · surowe kamienie" loading="lazy"></div>
-        <div class="tresc">
-          <h3>Bransoleta oplatana</h3>
-          <p class="kamien">czarny turmalin · surowe kamienie</p>
-          <div class="dol"><span class="cena">160 zł</span><span class="stan jest">DOSTĘPNA</span></div>
-        </div>
+      <div class="wyrob" data-kat="bransoleta">
+        <div class="foto"><img src="img/wyrob-2.jpg" alt="Bransoleta oplatana z czarnym turmalinem" loading="lazy"></div>
+        <div class="tresc"><h3>Bransoleta oplatana</h3><p class="kamien">czarny turmalin · surowe kamienie</p>
+          <div class="dol"><span class="cena">160 zł</span><span class="stan jest">DOSTĘPNA</span></div></div>
       </div>
 
-      <div class="wyrob">
-        <div class="foto"><img src="img/wyrob-3.jpg" alt="Bransoleta ze spiralami — cytryn · miedź kuta" loading="lazy"></div>
-        <div class="tresc">
-          <h3>Bransoleta ze spiralami</h3>
-          <p class="kamien">cytryn · miedź kuta</p>
-          <div class="dol"><span class="cena">190 zł</span><span class="stan jest">DOSTĘPNA</span></div>
-        </div>
+      <div class="wyrob" data-kat="bransoleta">
+        <div class="foto"><img src="img/wyrob-3.jpg" alt="Bransoleta ze spiralami z cytrynem" loading="lazy"></div>
+        <div class="tresc"><h3>Bransoleta ze spiralami</h3><p class="kamien">cytryn · miedź kuta</p>
+          <div class="dol"><span class="cena">190 zł</span><span class="stan jest">DOSTĘPNA</span></div></div>
       </div>
 
-      <div class="wyrob">
-        <div class="foto"><img src="img/wyrob-4.jpg" alt="Bransoleta z ametystami — ametyst · pięć kamieni" loading="lazy"></div>
-        <div class="tresc">
-          <h3>Bransoleta z ametystami</h3>
-          <p class="kamien">ametyst · pięć kamieni</p>
-          <div class="dol"><span class="cena">220 zł</span><span class="stan jest">DOSTĘPNA</span></div>
-        </div>
+      <div class="wyrob" data-kat="bransoleta">
+        <div class="foto"><img src="img/wyrob-4.jpg" alt="Bransoleta z ametystami" loading="lazy"></div>
+        <div class="tresc"><h3>Bransoleta z ametystami</h3><p class="kamien">ametyst · pięć kamieni</p>
+          <div class="dol"><span class="cena">220 zł</span><span class="stan jest">DOSTĘPNA</span></div></div>
       </div>
 
-      <div class="wyrob">
-        <div class="foto"><img src="img/wyrob-5.jpg" alt="Bransoleta szlifowana — czarny turmalin · spirale" loading="lazy"></div>
-        <div class="tresc">
-          <h3>Bransoleta szlifowana</h3>
-          <p class="kamien">czarny turmalin · spirale</p>
-          <div class="dol"><span class="cena">200 zł</span><span class="stan nie">SPRZEDANA</span></div>
-        </div>
+      <div class="wyrob" data-kat="bransoleta">
+        <div class="foto"><img src="img/wyrob-5.jpg" alt="Bransoleta szlifowana z czarnym turmalinem" loading="lazy"></div>
+        <div class="tresc"><h3>Bransoleta szlifowana</h3><p class="kamien">czarny turmalin · spirale</p>
+          <div class="dol"><span class="cena">200 zł</span><span class="stan nie">SPRZEDANA</span></div></div>
       </div>
 
-      <div class="wyrob">
+      <div class="wyrob" data-kat="inne">
         <div class="foto ciemna">
-          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" stroke="#d99a5e" stroke-width="3" stroke-linecap="round"><path d="M44 26a16 16 0 0 1 32 0"/><ellipse cx="60" cy="70" rx="20" ry="28" fill="#8fb39a" stroke="#d99a5e"/><path d="M60 42v6M48 56c8 6 16 6 24 0"/></svg>
-          <div class="podpis">wisiorki — zdjęcia wkrótce</div>
+          <svg width="130" height="130" viewBox="0 0 120 120" fill="none" stroke="#d99a5e" stroke-width="3" stroke-linecap="round"><path d="M44 26a16 16 0 0 1 32 0"/><ellipse cx="60" cy="70" rx="20" ry="28" fill="#8fb39a" stroke="#d99a5e"/><path d="M60 42v6M48 56c8 6 16 6 24 0"/></svg>
+          <div class="podpis">zdjęcia wkrótce</div>
         </div>
-        <div class="tresc">
-          <h3>Wisiorki i naszyjniki</h3>
-          <p class="kamien">kamień oplatany miedzią</p>
-          <div class="dol"><span class="cena">zapytaj</span><span class="stan zam">NA ZAMÓWIENIE</span></div>
-        </div>
+        <div class="tresc"><h3>Wisiorki i naszyjniki</h3><p class="kamien">kamień oplatany miedzią</p>
+          <div class="dol"><span class="cena">zapytaj</span><span class="stan zam">NA ZAMÓWIENIE</span></div></div>
       </div>
+
     </div>
   </div>
 </section>
 
 <section id="jak">
   <div class="srodek">
-    <div class="naglowek">
+    <div class="naglowek pokaz">
       <span>Jak to działa</span>
       <h2>Bez koszyka i płatności online</h2>
+      <div class="ozdoba"></div>
       <p>Rękodzieło to nie sklep z półki. Piszemy, ustalamy, rezerwuję sztukę dla Ciebie.</p>
     </div>
-    <div class="siatka k3">
+    <div class="siatka k3 pokaz">
       <div class="krok"><div class="numer">1</div><h3>Piszesz</h3><p>Wybierasz, co Ci się podoba, i wysyłasz wiadomość. Możesz też zapytać o coś zupełnie własnego.</p></div>
       <div class="krok"><div class="numer">2</div><h3>Ustalamy</h3><p>Rozmiar, kamień, wykończenie. Przy wyrobie na zamówienie podaję cenę po rozmowie.</p></div>
       <div class="krok"><div class="numer">3</div><h3>Rezerwuję i wysyłam</h3><p>Odkładam sztukę dla Ciebie i wysyłam pod wskazany adres albo oddaję osobiście na jarmarku.</p></div>
@@ -296,15 +323,15 @@
   </div>
 </section>
 
-<section id="omnie" style="background:#f1e9dd">
+<section id="omnie" style="background:var(--krem2)">
   <div class="srodek">
-    <div class="omnie">
-      <div class="foto ciemna" style="border-radius:20px">
-        <svg width="110" height="110" viewBox="0 0 120 120" fill="none" stroke="#d99a5e" stroke-width="3" stroke-linecap="round"><circle cx="60" cy="40" r="18"/><path d="M26 100c0-18 15-28 34-28s34 10 34 28"/><path d="M86 60l14-14M94 40l10 10" opacity=".6"/></svg>
+    <div class="omnie pokaz">
+      <div class="foto ciemna" style="border-radius:22px">
+        <svg width="120" height="120" viewBox="0 0 120 120" fill="none" stroke="#d99a5e" stroke-width="3" stroke-linecap="round"><circle cx="60" cy="40" r="18"/><path d="M26 100c0-18 15-28 34-28s34 10 34 28"/><path d="M86 60l14-14M94 40l10 10" opacity=".6"/></svg>
         <div class="podpis">zdjęcie przy pracy</div>
       </div>
       <div>
-        <div class="naglowek" style="text-align:left;margin-bottom:14px">
+        <div class="naglowek" style="text-align:left;margin-bottom:16px">
           <span>O mnie</span>
           <h2>Kuję miedź, bo lubię</h2>
         </div>
@@ -316,30 +343,34 @@
 </section>
 
 <section id="jarmarki">
-  <div class="srodek" style="max-width:620px">
-    <div class="naglowek">
+  <div class="srodek" style="max-width:640px">
+    <div class="naglowek pokaz">
       <span>Gdzie mnie spotkać</span>
       <h2>Jarmarki i targi</h2>
+      <div class="ozdoba"></div>
       <p>Najłatwiej wybrać wyrób na żywo — przymierzyć, potrzymać w dłoni.</p>
     </div>
-    <div class="jarmark">
-      <div class="data"><b>19</b><span>paź</span></div>
-      <div><b class="co">Jarmark rękodzieła</b><p>przykładowy wpis — tu wejdą prawdziwe terminy</p></div>
-    </div>
-    <div class="jarmark">
-      <div class="data"><b>02</b><span>lis</span></div>
-      <div><b class="co">Targi slow life</b><p>przykładowy wpis</p></div>
+    <div class="pokaz">
+      <div class="jarmark">
+        <div class="data"><b>19</b><span>paź</span></div>
+        <div><b class="co">Jarmark rękodzieła</b><p>przykładowy wpis — tu wejdą prawdziwe terminy</p></div>
+      </div>
+      <div class="jarmark">
+        <div class="data"><b>02</b><span>lis</span></div>
+        <div><b class="co">Targi slow life</b><p>przykładowy wpis</p></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="kontakt" style="background:#f1e9dd">
+<section id="kontakt" style="background:var(--krem2)">
   <div class="srodek">
-    <div class="naglowek">
+    <div class="naglowek pokaz">
       <span>Kontakt</span>
       <h2>Chcę kupić albo mam pytanie</h2>
+      <div class="ozdoba"></div>
     </div>
-    <form class="form" onsubmit="event.preventDefault();this.querySelector('button').textContent='To na razie pokaz — formularz podłączymy później';">
+    <form class="form pokaz" id="formularz">
       <label for="imie">Imię</label>
       <input id="imie" placeholder="Jak się do Ciebie zwracać">
       <label for="kon">Telefon albo e-mail</label>
@@ -348,7 +379,13 @@
       <textarea id="wiad" placeholder="Co Cię interesuje? Możesz podać rozmiar nadgarstka."></textarea>
       <div class="zgoda"><input type="checkbox" style="width:auto;margin:3px 0 0"><span>Zgadzam się na kontakt w sprawie mojego pytania.</span></div>
       <button type="submit">Wyślij wiadomość</button>
-      <p class="mala">Odpisuję zwykle tego samego dnia.</p>
+      <p class="albo">albo od razu, najszybciej:</p>
+      <p style="text-align:center;margin:0">
+        <a class="messenger" href="https://m.me/100078696184625" target="_blank" rel="noopener">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="#e8c9a8"><path d="M12 2C6.3 2 2 6.2 2 11.7c0 3.1 1.4 5.9 3.7 7.7V23l3.4-1.9c.9.3 1.9.4 2.9.4 5.7 0 10-4.2 10-9.7S17.7 2 12 2zm1 13.1l-2.5-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.8-2.7-5.4 5.7z"/></svg>
+          Napisz na Messengerze
+        </a>
+      </p>
     </form>
   </div>
 </section>
@@ -356,14 +393,14 @@
 <footer>
   <div class="srodek">
     <div class="ikony">
-      <a href="https://www.facebook.com/profile.php?id=100078696184625" aria-label="Facebook"><svg width="19" height="19" viewBox="0 0 24 24" fill="#fff"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4v-2c0-.6.4-1 1-1z"/></svg></a>
-      <a href="#" aria-label="Instagram"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="#fff" stroke="none"/></svg></a>
+      <a href="https://www.facebook.com/profile.php?id=100078696184625" target="_blank" rel="noopener" aria-label="Facebook"><svg width="19" height="19" viewBox="0 0 24 24" fill="#fff"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4v-2c0-.6.4-1 1-1z"/></svg></a>
+      <a href="https://m.me/100078696184625" target="_blank" rel="noopener" aria-label="Messenger"><svg width="19" height="19" viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.3 2 2 6.2 2 11.7c0 3.1 1.4 5.9 3.7 7.7V23l3.4-1.9c.9.3 1.9.4 2.9.4 5.7 0 10-4.2 10-9.7S17.7 2 12 2zm1 13.1l-2.5-2.7-4.9 2.7 5.4-5.7 2.6 2.7 4.8-2.7-5.4 5.7z"/></svg></a>
     </div>
     <p class="zegnaj">Pięknego życia</p>
     <p style="margin:0">Dmytro Nowy · ręcznie kute wyroby z miedzi</p>
     <p class="info">Strona pokazowa, przygotowana do obejrzenia przed uruchomieniem.
-      Zdjęcia bransolet są prawdziwe, z profilu Dmytro. Ceny i terminy jarmarków
-      są przykładowe — wejdą prawdziwe. Formularz nie wysyła jeszcze wiadomości.</p>
+      Zdjęcia bransolet są prawdziwe. Ceny i terminy jarmarków są przykładowe —
+      wejdą prawdziwe. Formularz nie wysyła jeszcze wiadomości, ale przycisk Messengera działa.</p>
   </div>
 </footer>
 
@@ -375,15 +412,50 @@
   <a href="#kontakt"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg>Kontakt</a>
 </nav>
 
+<div class="lupa" id="lupa"><span class="zamknij">&times;</span><img alt=""></div>
+
 <script>
+  // powiekszanie zdjec po dotknieciu
+  const lupa = document.getElementById('lupa'), duze = lupa.querySelector('img');
+  document.querySelectorAll('.wyrob .foto img').forEach(i => i.addEventListener('click', () => {
+    duze.src = i.src; duze.alt = i.alt; lupa.classList.add('widac');
+  }));
+  lupa.addEventListener('click', () => lupa.classList.remove('widac'));
+  addEventListener('keydown', e => { if (e.key === 'Escape') lupa.classList.remove('widac'); });
+
+  // filtrowanie wyrobow
+  document.querySelectorAll('.filtry button').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.filtry button').forEach(x => x.classList.remove('akt'));
+    b.classList.add('akt');
+    const f = b.dataset.f;
+    document.querySelectorAll('#lista .wyrob').forEach(w => {
+      w.style.display = (f === 'wszystko' || w.dataset.kat === f) ? '' : 'none';
+    });
+  }));
+
+  // delikatne pojawianie sie sekcji
+  const oko = new IntersectionObserver(wpisy => {
+    wpisy.forEach(w => { if (w.isIntersecting) { w.target.classList.add('widoczna'); oko.unobserve(w.target); } });
+  }, { threshold: .12 });
+  document.querySelectorAll('.pokaz').forEach(e => oko.observe(e));
+
+  // podswietlanie miejsca w dolnym pasku
   const sekcje = [...document.querySelectorAll('section, header')];
   const linki = [...document.querySelectorAll('.pasek a')];
   addEventListener('scroll', () => {
     const y = scrollY + 90;
-    let aktywna = 'gora';
-    sekcje.forEach(s => { if (s.offsetTop <= y) aktywna = s.id || aktywna; });
-    linki.forEach(a => a.classList.toggle('akt', a.getAttribute('href') === '#' + aktywna));
+    let akt = 'gora';
+    sekcje.forEach(s => { if (s.offsetTop <= y) akt = s.id || akt; });
+    linki.forEach(a => a.classList.toggle('akt', a.getAttribute('href') === '#' + akt));
   }, { passive: true });
+
+  // formularz jeszcze nie wysyla - kierujemy na Messengera
+  document.getElementById('formularz').addEventListener('submit', e => {
+    e.preventDefault();
+    const b = e.target.querySelector('button[type=submit]');
+    b.textContent = 'Napisz na Messengerze — formularz podłączymy później';
+    b.style.background = '#2b211a';
+  });
 </script>
 </body>
 </html>
