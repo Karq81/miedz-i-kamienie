@@ -203,6 +203,26 @@
   .pytaj:hover{background:var(--miedz-ciemna)}
   .drobne{font-size:13px;color:var(--tekst-2);margin:12px 0 0}
   .zamknij-okno{position:absolute;top:14px;right:18px;color:#e8c9a8;font-size:32px;line-height:1;cursor:pointer}
+  .wiecej{grid-column:1/-1;justify-self:center;margin-top:6px;padding:13px 30px;border-radius:30px;
+          border:1.5px solid var(--miedz);background:transparent;color:var(--miedz-ciemna);
+          font:inherit;font-weight:600;font-size:15px;cursor:pointer}
+  .wiecej:hover{background:var(--miedz);color:#fff}
+  @media(max-width:719px){
+    #lista{grid-template-columns:1fr 1fr;gap:10px}
+    #lista .wyrob{border-radius:16px}
+    #lista .wyrob .tresc{padding:11px 11px 13px}
+    #lista .wyrob h3{font-size:14.5px;line-height:1.25}
+    #lista .wyrob .kamien{font-size:11.5px}
+    #lista .cena{font-size:15px}
+    #lista .stan{font-size:9px;padding:3px 7px}
+    #lista .dol{flex-wrap:wrap;gap:5px}
+  }
+  .ukryta{display:none!important}
+  @keyframes wejscie{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .wchodzi{animation:wejscie .35s ease}
+  .menu a.akt{color:var(--miedz-ciemna);font-weight:600}
+  .menu a.akt::after{right:0}
+  .pasek a{padding:2px 0}
   .lupa{position:fixed;inset:0;z-index:90;background:rgba(20,14,10,.94);display:none;
         align-items:center;justify-content:center;padding:20px;cursor:zoom-out}
   .lupa.widac{display:flex}
@@ -305,8 +325,9 @@
   <div class="srodek">
     <a class="marka" href="#gora">Miedź i kamienie</a>
     <nav class="menu">
+      <a href="#start">Start</a>
       <a href="#wyroby">Wyroby</a>
-      <a href="#jak">Jak zamówić</a>
+      <a href="#galeria">Galeria</a>
       <a href="#omnie">O mnie</a>
       <a href="#jarmarki">Jarmarki</a>
       <a href="#kontakt">Kontakt</a>
@@ -315,7 +336,7 @@
   </div>
 </div>
 
-<header class="hero" id="gora">
+<header class="hero" id="gora" data-tab="start">
   <div class="tlo" aria-hidden="true"><img src="img/n01.jpg" alt=""><img src="img/n02.jpg" alt=""><img src="img/n03.jpg" alt=""><img src="img/n04.jpg" alt=""><img src="img/n05.jpg" alt=""><img src="img/n06.jpg" alt=""><img src="img/n07.jpg" alt=""><img src="img/n08.jpg" alt=""><img src="img/n09.jpg" alt=""><img src="img/n10.jpg" alt=""><img src="img/n11.jpg" alt=""><img src="img/n12.jpg" alt=""><img src="img/n13.jpg" alt=""><img src="img/n14.jpg" alt=""><img src="img/n15.jpg" alt=""><img src="img/n16.jpg" alt=""><img src="img/n17.jpg" alt=""><img src="img/n18.jpg" alt=""><img src="img/n19.jpg" alt=""><img src="img/n20.jpg" alt=""><img src="img/n21.jpg" alt=""><img src="img/n01.jpg" alt=""><img src="img/n02.jpg" alt=""><img src="img/n03.jpg" alt=""><img src="img/n04.jpg" alt=""><img src="img/n05.jpg" alt=""><img src="img/n06.jpg" alt=""><img src="img/n07.jpg" alt=""><img src="img/n08.jpg" alt=""><img src="img/n09.jpg" alt=""><img src="img/n10.jpg" alt=""><img src="img/n11.jpg" alt=""><img src="img/n12.jpg" alt=""><img src="img/n13.jpg" alt=""><img src="img/n14.jpg" alt=""><img src="img/n15.jpg" alt=""><img src="img/n16.jpg" alt=""><img src="img/n17.jpg" alt=""><img src="img/n18.jpg" alt=""><img src="img/n19.jpg" alt=""></div><div class="mgla"></div>
   <div class="srodek">
     <div class="etykieta">Rękodzieło z miedzi</div>
@@ -330,7 +351,7 @@
   </div>
 </header>
 
-<div class="zaufanie">
+<div class="zaufanie" data-tab="start">
   <div class="srodek">
     <span><b>Ręczna robota</b> — kute młotkiem</span>
     <span><b>Naturalne kamienie</b> — bez imitacji</span>
@@ -338,7 +359,7 @@
   </div>
 </div>
 
-<section id="kategorie">
+<section id="kategorie" data-tab="start">
   <div class="srodek">
     <div class="naglowek pokaz">
       <span>Co robię</span>
@@ -374,7 +395,7 @@
   </div>
 </section>
 
-<section id="wyroby" class="pas">
+<section id="wyroby" class="pas" data-tab="wyroby">
   <div class="srodek">
     <div class="naglowek pokaz">
       <span>Wyroby</span>
@@ -391,7 +412,7 @@
   </div>
 </section>
 
-<section id="galeria">
+<section id="galeria" data-tab="galeria">
   <div class="srodek">
     <div class="naglowek pokaz">
       <span>Galeria</span>
@@ -416,7 +437,7 @@
   </div>
 </section>
 
-<section id="jak" class="ciemna-sekcja">
+<section id="jak" class="ciemna-sekcja" data-tab="kontakt">
   <div class="srodek">
     <div class="naglowek pokaz">
       <span>Jak to działa</span>
@@ -432,7 +453,7 @@
   </div>
 </section>
 
-<section id="omnie" class="pas">
+<section id="omnie" class="pas" data-tab="omnie">
   <div class="srodek">
     <div class="omnie pokaz">
       <div class="foto ciemna" style="border-radius:22px">
@@ -451,7 +472,7 @@
   </div>
 </section>
 
-<section id="jarmarki">
+<section id="jarmarki" data-tab="jarmarki">
   <div class="srodek" style="max-width:640px">
     <div class="naglowek pokaz">
       <span>Gdzie mnie spotkać</span>
@@ -472,7 +493,7 @@
   </div>
 </section>
 
-<section id="kontakt" class="pas">
+<section id="kontakt" class="pas" data-tab="kontakt">
   <div class="srodek">
     <div class="naglowek pokaz">
       <span>Kontakt</span>
@@ -514,10 +535,11 @@
 </footer>
 
 <nav class="pasek">
-  <a class="akt" href="#gora"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l8-7 8 7v8a1 1 0 01-1 1h-5v-6h-4v6H5a1 1 0 01-1-1z"/></svg>Start</a>
+  <a href="#start"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l8-7 8 7v8a1 1 0 01-1 1h-5v-6h-4v6H5a1 1 0 01-1-1z"/></svg>Start</a>
   <a href="#wyroby"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>Wyroby</a>
-  <a href="#jarmarki"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-9a7 7 0 0114 0c0 4.5-7 9-7 9z"/><circle cx="12" cy="12" r="2.4"/></svg>Jarmarki</a>
+  <a href="#galeria"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>Galeria</a>
   <a href="#omnie"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg>O mnie</a>
+  <a href="#jarmarki"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-9a7 7 0 0114 0c0 4.5-7 9-7 9z"/><circle cx="12" cy="12" r="2.4"/></svg>Jarmarki</a>
   <a href="#kontakt"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg>Kontakt</a>
 </nav>
 
@@ -526,14 +548,36 @@
 <div class="lupa" id="lupa"><span class="zamknij">&times;</span><img alt=""></div>
 
 <script>
-  // Przegladarka probuje przywrocic poprzednie miejsce przewijania, a przy plynnym
-  // przewijaniu robi to z animacja - wygladalo, jakby strona sama zjezdzala na dol.
+  // ZAKLADKI - strona nie przewija sie przez wszystko, tylko pokazuje jedna czesc naraz.
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-  if (!location.hash) {
-    const naGore = () => window.scrollTo(0, 0);
-    naGore();
-    addEventListener('load', naGore);
+  const ZAKLADKI = ['start', 'wyroby', 'galeria', 'omnie', 'jarmarki', 'kontakt'];
+  // dawne kotwice i podstrony tez prowadza do wlasciwej zakladki
+  const MAPA = { gora: 'start', start: 'start', kategorie: 'start', wyroby: 'wyroby',
+                 galeria: 'galeria', jak: 'kontakt', omnie: 'omnie', jarmarki: 'jarmarki', kontakt: 'kontakt' };
+
+  function pokazZakladke(nazwa, zapisz) {
+    if (!ZAKLADKI.includes(nazwa)) nazwa = 'start';
+    document.querySelectorAll('[data-tab]').forEach(e => {
+      const ta = e.dataset.tab === nazwa;
+      e.classList.toggle('ukryta', !ta);
+      if (ta) { e.classList.remove('wchodzi'); void e.offsetWidth; e.classList.add('wchodzi'); }
+    });
+    document.querySelectorAll('.pasek a, .menu a').forEach(a =>
+      a.classList.toggle('akt', MAPA[a.getAttribute('href').slice(1)] === nazwa));
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    if (zapisz) history.pushState({ z: nazwa }, '', '#' + nazwa);
   }
+
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    const id = a.getAttribute('href').slice(1);
+    if (!(id in MAPA)) return;
+    e.preventDefault();
+    pokazZakladke(MAPA[id], true);
+  });
+  addEventListener('popstate', () => pokazZakladke(MAPA[location.hash.slice(1)] || 'start', false));
+  pokazZakladke(MAPA[location.hash.slice(1)] || 'start', false);
 
   // powiekszanie zdjec po dotknieciu
   const lupa = document.getElementById('lupa'), duze = lupa.querySelector('img');
@@ -559,16 +603,6 @@
   }, { threshold: .12 });
   document.querySelectorAll('.pokaz').forEach(e => oko.observe(e));
 
-  // podswietlanie miejsca w dolnym pasku
-  const sekcje = [...document.querySelectorAll('section, header')];
-  const linki = [...document.querySelectorAll('.pasek a')];
-  addEventListener('scroll', () => {
-    const y = scrollY + 90;
-    let akt = 'gora';
-    sekcje.forEach(s => { if (s.offsetTop <= y) akt = s.id || akt; });
-    linki.forEach(a => a.classList.toggle('akt', a.getAttribute('href') === '#' + akt));
-  }, { passive: true });
-
   // formularz jeszcze nie wysyla - kierujemy na Messengera
   document.getElementById('formularz').addEventListener('submit', e => {
     e.preventDefault();
@@ -577,6 +611,6 @@
     b.style.background = '#2b211a';
   });
 </script>
-<script src="sklep.js?v=1"></script>
+<script src="sklep.js?v=2"></script>
 </body>
 </html>

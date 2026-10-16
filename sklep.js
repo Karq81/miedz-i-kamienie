@@ -15,6 +15,8 @@ const NAZWY_KATEGORII = {
 let magazyn = [];
 let kategoria = 'wszystko';
 let szukane = '';
+const PORCJA = 8;      // tyle kart naraz - reszta po dotknieciu "Pokaz wiecej"
+let ile = PORCJA;
 
 const lista = document.getElementById('lista');
 const filtry = document.getElementById('filtry');
@@ -57,9 +59,14 @@ function pasuje(p) {
 
 function rysuj() {
   const widoczne = magazyn.filter(pasuje);
+  const porcja = widoczne.slice(0, ile);
+  const reszta = widoczne.length - porcja.length;
   lista.innerHTML = widoczne.length
-    ? widoczne.map(rysujKarte).join('')
+    ? porcja.map(rysujKarte).join('') +
+      (reszta > 0 ? `<button class="wiecej" id="wiecej">Pokaż więcej (${reszta})</button>` : '')
     : '<p class="pusto">Nic takiego nie mam. Napisz — mogę zrobić na zamówienie.</p>';
+  const wiecej = document.getElementById('wiecej');
+  if (wiecej) wiecej.addEventListener('click', e => { e.stopPropagation(); ile += PORCJA; rysuj(); });
 
   const sztuk = magazyn.reduce((s, p) => s + Math.max(0, p.ilosc), 0);
   podsumowanie.textContent =
@@ -77,6 +84,7 @@ function rysujFiltry() {
   ).join('');
   filtry.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
     kategoria = b.dataset.k;
+    ile = PORCJA;
     filtry.querySelectorAll('button').forEach(x => x.classList.toggle('akt', x === b));
     rysuj();
   }));
@@ -125,7 +133,7 @@ okno.addEventListener('click', e => {
 });
 addEventListener('keydown', e => { if (e.key === 'Escape') okno.classList.remove('widac'); });
 
-pole.addEventListener('input', () => { szukane = pole.value.trim().toLowerCase(); rysuj(); });
+pole.addEventListener('input', () => { szukane = pole.value.trim().toLowerCase(); ile = PORCJA; rysuj(); });
 
 /* ------------------------------------------------------------------ start */
 
