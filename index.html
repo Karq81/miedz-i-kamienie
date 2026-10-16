@@ -208,6 +208,89 @@
   .pokaz{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
   .pokaz.widoczna{opacity:1;transform:none}
   @media(prefers-reduced-motion:reduce){ .pokaz{opacity:1;transform:none;transition:none} }
+
+  /* ===================================================== wyglad: tla i ozdoby */
+  body{background-color:var(--krem);
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .42 0 0 0 0 .27 0 0 0 0 .15 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  section{position:relative;scroll-margin-top:60px}
+  .pas{background:
+    radial-gradient(700px 360px at 95% 0%,rgba(217,154,94,.16),transparent 70%),
+    radial-gradient(600px 340px at 0% 100%,rgba(184,115,51,.10),transparent 70%),
+    rgba(238,226,209,.72)}
+  section:not(.pas):not(.ciemna-sekcja){background:
+    radial-gradient(640px 320px at 0% 10%,rgba(217,154,94,.10),transparent 70%)}
+
+  /* hero: mozaika prawdziwych zdjec pod mgla */
+  .hero{padding:60px 0 70px}
+  .hero .tlo{filter:none;opacity:1;transform:rotate(-8deg) scale(1.45);background:none;
+    display:grid;grid-template-columns:repeat(4,1fr);gap:8px;align-content:center}
+  .hero .tlo img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;opacity:.55;
+    filter:saturate(.85) sepia(.15)}
+  @media(min-width:720px){ .hero .tlo{grid-template-columns:repeat(8,1fr);transform:rotate(-8deg) scale(1.2)} }
+  .hero .mgla{background:
+    radial-gradient(ellipse 60% 45% at 50% 42%,rgba(184,115,51,.30),transparent 70%),
+    linear-gradient(180deg,rgba(26,18,12,.80) 0%,rgba(30,22,15,.86) 50%,rgba(26,18,12,.96) 100%)}
+  .hero h1{font-size:58px;background:linear-gradient(180deg,#fbeee0 20%,#e2b07f 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    text-shadow:0 0 0 transparent;filter:drop-shadow(0 4px 18px rgba(0,0,0,.45))}
+  .hero .etykieta{display:inline-flex;align-items:center;gap:10px}
+  .hero .etykieta::before,.hero .etykieta::after{content:"";width:26px;height:1px;background:var(--miedz-jasna);opacity:.7}
+  .hero-foto{width:240px;border-radius:120px 120px 22px 22px;border:2px solid rgba(217,154,94,.65);
+    box-shadow:0 0 0 7px rgba(43,33,26,.6),0 0 0 8px rgba(217,154,94,.35),0 30px 60px rgba(0,0,0,.6)}
+  .glowny{background:linear-gradient(135deg,#d08a4b,#a9632a);box-shadow:0 8px 22px rgba(184,115,51,.35)}
+  .glowny:hover{background:linear-gradient(135deg,#b87333,#8c4a1e)}
+
+  .zaufanie{background:linear-gradient(90deg,#241a13,#33261b 50%,#241a13);
+    border-top:1px solid rgba(217,154,94,.25);border-bottom:1px solid rgba(217,154,94,.25)}
+  .zaufanie span{display:inline-flex;align-items:center;gap:8px}
+  .zaufanie span::before{content:"";width:7px;height:7px;background:var(--miedz-jasna);transform:rotate(45deg);flex:none}
+
+  /* ozdobnik pod tytulem: kreska - romb - kreska */
+  .ozdoba{width:150px;height:14px;opacity:1;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 14'%3E%3Cpath d='M0 7h58M92 7h58' stroke='%23d99a5e' stroke-width='1.2'/%3E%3Cpath d='M75 1l6 6-6 6-6-6z' fill='%23b87333'/%3E%3Ccircle cx='63' cy='7' r='1.8' fill='%23d99a5e'/%3E%3Ccircle cx='87' cy='7' r='1.8' fill='%23d99a5e'/%3E%3C/svg%3E") center/contain no-repeat}
+  .naglowek h2{color:#3a2a1e}
+
+  /* karty */
+  .kat,.wyrob,.krok,.jarmark,.form{box-shadow:0 1px 2px rgba(70,50,35,.05),0 8px 24px rgba(70,50,35,.07)}
+  .kat{border-color:rgba(217,154,94,.28)}
+  .kat:hover{box-shadow:0 16px 34px rgba(140,74,30,.16)}
+  .kat>svg{width:100%;height:auto;aspect-ratio:1;padding:26%;border-radius:13px;margin:0 0 10px;
+    background:radial-gradient(circle at 50% 40%,#fbf3e8,#e9d6bf 75%)}
+  .wyrob{border-color:rgba(217,154,94,.25)}
+  .galeria img{border:0;box-shadow:0 6px 16px rgba(70,50,35,.18)}
+  .form{border-top:3px solid var(--miedz)}
+  .data{background:linear-gradient(160deg,#d08a4b,#8c4a1e)}
+
+  /* jak zamowic: ciemna sekcja z kutym wzorem */
+  .ciemna-sekcja{color:#efe2d2;overflow:hidden;background:
+    radial-gradient(ellipse 70% 60% at 50% 0%,rgba(184,115,51,.35),transparent 70%),
+    radial-gradient(circle at 20% 80%,rgba(217,154,94,.12),transparent 40%),
+    #231911}
+  .ciemna-sekcja::before{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+    background:radial-gradient(circle at 30% 30%,rgba(255,214,170,.10) 0 3px,transparent 13px) 0 0/34px 34px,
+               radial-gradient(circle at 70% 70%,rgba(0,0,0,.22) 0 4px,transparent 14px) 17px 17px/34px 34px}
+  .ciemna-sekcja .srodek{position:relative}
+  .ciemna-sekcja .naglowek span{color:var(--miedz-jasna)}
+  .ciemna-sekcja .naglowek h2{color:#fbeee0}
+  .ciemna-sekcja .naglowek p{color:#cdb8a3}
+  .ciemna-sekcja .krok{background:linear-gradient(160deg,#3a2b1f,#2a1f16);
+    border:1px solid rgba(217,154,94,.30);box-shadow:0 14px 34px rgba(0,0,0,.35);
+    position:relative;padding:26px 22px 24px}
+  .ciemna-sekcja .krok h3{color:#fbeee0;font-family:var(--ozdobny);font-size:24px;font-weight:600}
+  .ciemna-sekcja .krok p{color:#cdb8a3}
+  .ciemna-sekcja .numer{width:46px;height:46px;font-size:19px;
+    background:linear-gradient(145deg,#e0a46a,#9a5524);box-shadow:0 0 0 5px rgba(217,154,94,.15),0 6px 16px rgba(0,0,0,.4)}
+  .krok .ikona{position:absolute;top:20px;right:20px;opacity:.55}
+  @media(min-width:720px){
+    .kroki{position:relative}
+    .kroki::before{content:"";position:absolute;top:49px;left:16%;right:16%;height:1px;
+      background:repeating-linear-gradient(90deg,rgba(217,154,94,.6) 0 6px,transparent 6px 12px)}
+  }
+
+  footer{position:relative;background:
+    radial-gradient(ellipse 60% 80% at 50% 0%,rgba(184,115,51,.22),transparent 70%),#221810;
+    border-top:1px solid rgba(217,154,94,.35)}
+  footer .ikony a{background:linear-gradient(145deg,#d08a4b,#8c4a1e);box-shadow:0 6px 16px rgba(0,0,0,.35)}
+  .pasek{background:rgba(255,253,250,.94);backdrop-filter:blur(10px)}
 </style>
 </head>
 <body>
@@ -227,7 +310,7 @@
 </div>
 
 <header class="hero" id="gora">
-  <div class="tlo"></div><div class="mgla"></div>
+  <div class="tlo" aria-hidden="true"><img src="img/galeria/g02.jpg" alt=""><img src="img/galeria/g03.jpg" alt=""><img src="img/galeria/g06.jpg" alt=""><img src="img/galeria/g09.jpg" alt=""><img src="img/galeria/g12.jpg" alt=""><img src="img/galeria/g13.jpg" alt=""><img src="img/galeria/g15.jpg" alt=""><img src="img/galeria/g17.jpg" alt=""><img src="img/galeria/g22.jpg" alt=""><img src="img/galeria/g01.jpg" alt=""><img src="img/galeria/g21.jpg" alt=""><img src="img/galeria/g19.jpg" alt=""><img src="img/galeria/g04.jpg" alt=""><img src="img/galeria/g05.jpg" alt=""><img src="img/galeria/g07.jpg" alt=""><img src="img/galeria/g08.jpg" alt=""><img src="img/galeria/g10.jpg" alt=""><img src="img/galeria/g11.jpg" alt=""><img src="img/galeria/g14.jpg" alt=""><img src="img/galeria/g16.jpg" alt=""><img src="img/galeria/g18.jpg" alt=""><img src="img/galeria/g20.jpg" alt=""><img src="img/galeria/g23.jpg" alt=""><img src="img/galeria/g24.jpg" alt=""><img src="img/galeria/g02.jpg" alt=""><img src="img/galeria/g03.jpg" alt=""><img src="img/galeria/g06.jpg" alt=""><img src="img/galeria/g09.jpg" alt=""><img src="img/galeria/g12.jpg" alt=""><img src="img/galeria/g13.jpg" alt=""><img src="img/galeria/g15.jpg" alt=""><img src="img/galeria/g17.jpg" alt=""><img src="img/galeria/g22.jpg" alt=""><img src="img/galeria/g01.jpg" alt=""><img src="img/galeria/g21.jpg" alt=""><img src="img/galeria/g19.jpg" alt=""><img src="img/galeria/g04.jpg" alt=""><img src="img/galeria/g05.jpg" alt=""><img src="img/galeria/g07.jpg" alt=""><img src="img/galeria/g08.jpg" alt=""></div><div class="mgla"></div>
   <div class="srodek">
     <div class="etykieta">Rękodzieło z miedzi</div>
     <h1>Dmytro Nowy</h1>
@@ -285,7 +368,7 @@
   </div>
 </section>
 
-<section id="wyroby" style="background:var(--krem2)">
+<section id="wyroby" class="pas">
   <div class="srodek">
     <div class="naglowek pokaz">
       <span>Wyroby</span>
@@ -327,7 +410,7 @@
   </div>
 </section>
 
-<section id="jak">
+<section id="jak" class="ciemna-sekcja">
   <div class="srodek">
     <div class="naglowek pokaz">
       <span>Jak to działa</span>
@@ -335,15 +418,15 @@
       <div class="ozdoba"></div>
       <p>Rękodzieło to nie sklep z półki. Piszemy, ustalamy, rezerwuję sztukę dla Ciebie.</p>
     </div>
-    <div class="siatka k3 pokaz">
-      <div class="krok"><div class="numer">1</div><h3>Piszesz</h3><p>Wybierasz, co Ci się podoba, i wysyłasz wiadomość. Możesz też zapytać o coś zupełnie własnego.</p></div>
-      <div class="krok"><div class="numer">2</div><h3>Ustalamy</h3><p>Rozmiar, kamień, wykończenie. Przy wyrobie na zamówienie podaję cenę po rozmowie.</p></div>
-      <div class="krok"><div class="numer">3</div><h3>Rezerwuję i wysyłam</h3><p>Odkładam sztukę dla Ciebie i wysyłam pod wskazany adres albo oddaję osobiście na jarmarku.</p></div>
+    <div class="siatka k3 kroki pokaz">
+      <div class="krok"><svg class="ikona" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d99a5e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg><div class="numer">1</div><h3>Piszesz</h3><p>Wybierasz, co Ci się podoba, i wysyłasz wiadomość. Możesz też zapytać o coś zupełnie własnego.</p></div>
+      <div class="krok"><svg class="ikona" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d99a5e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg><div class="numer">2</div><h3>Ustalamy</h3><p>Rozmiar, kamień, wykończenie. Przy wyrobie na zamówienie podaję cenę po rozmowie.</p></div>
+      <div class="krok"><svg class="ikona" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d99a5e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M3 12h18M12 8v12M8 8c-2-3 2-5 4 0 2-5 6-3 4 0"/></svg><div class="numer">3</div><h3>Rezerwuję i wysyłam</h3><p>Odkładam sztukę dla Ciebie i wysyłam pod wskazany adres albo oddaję osobiście na jarmarku.</p></div>
     </div>
   </div>
 </section>
 
-<section id="omnie" style="background:var(--krem2)">
+<section id="omnie" class="pas">
   <div class="srodek">
     <div class="omnie pokaz">
       <div class="foto ciemna" style="border-radius:22px">
@@ -383,7 +466,7 @@
   </div>
 </section>
 
-<section id="kontakt" style="background:var(--krem2)">
+<section id="kontakt" class="pas">
   <div class="srodek">
     <div class="naglowek pokaz">
       <span>Kontakt</span>
